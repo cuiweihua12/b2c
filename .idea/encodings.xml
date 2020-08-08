@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/b2c-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-item/b2c-item-interface/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-item/b2c-item-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-registry/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-search/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/b2c-upload/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

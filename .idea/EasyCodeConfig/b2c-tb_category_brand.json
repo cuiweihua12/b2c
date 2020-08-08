@@ -1,0 +1,26 @@
+{
+  "name" : "TbCategoryBrand",
+  "preName" : "",
+  "comment" : "商品分类和品牌的中间表，两者是多对多关系",
+  "templateGroupName" : "Default",
+  "fullColumn" : [ {
+    "name" : "categoryId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "brandId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.cwh",
+  "savePath" : "./b2c-item/b2c-item-interface/src/main/java/com/cwh",
+  "saveModelName" : "b2c-item-interface"
+}

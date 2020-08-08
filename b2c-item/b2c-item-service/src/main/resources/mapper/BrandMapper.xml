@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cwh.mapper.BrandMapper">
+  <resultMap id="BaseResultMap" type="com.cwh.entity.Brand">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="image" jdbcType="VARCHAR" property="image" />
+    <result column="letter" jdbcType="CHAR" property="letter" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, `name`, image, letter
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_brand
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" parameterType="java.util.HashMap" resultType="com.cwh.entity.Brand">
+    select
+    <include refid="Base_Column_List" />
+    from tb_brand
+    where 1=1
+    <if test="name != '' and name != null">
+      and name like concat('%',#{name},'%')
+    </if>
+    <if test="sort != null and sort !=''">
+        <if test="sortBy != null and sortBy != ''">
+            ORDER BY ${sortBy} ${sort}
+        </if>
+    </if>
+  </select>
+  <select id="criteraQuery" resultType="com.cwh.entity.Brand">
+    select
+    <include refid="Base_Column_List" />
+    from tb_brand
+    where 1=1
+    <if test="id != null">
+      and id = #{id}
+    </if>
+    <if test="name != null and name != ''">
+      and name like concat('%',#{name},'%')
+    </if>
+    <if test="letter != null">
+      and letter like concat('%',#{letter},'%')
+    </if>
+  </select>
+    <select id="selectBrandByCategoryId" resultType="com.cwh.entity.Brand">
+      SELECT
+           b.id,
+           b.image,
+           b.letter,
+           b.`name`
+      FROM
+          `tb_brand` b,
+          tb_category c,
+          tb_category_brand cb
+      WHERE
+          b.id = cb.brand_id
+      AND
+          c.id = cb.category_id
+      AND
+        cb.category_id = #{cateGoryId}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from tb_brand
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.cwh.entity.Brand" useGeneratedKeys="true">
+    insert into tb_brand (`name`, image, letter
+      )
+    values (#{name,jdbcType=VARCHAR}, #{image,jdbcType=VARCHAR}, #{letter,jdbcType=CHAR}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.cwh.entity.Brand" useGeneratedKeys="true">
+    insert into tb_brand
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="image != null">
+        image,
+      </if>
+      <if test="letter != null">
+        letter,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null">
+        #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="letter != null">
+        #{letter,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cwh.entity.Brand">
+    update tb_brand
+    <set>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null">
+        image = #{image,jdbcType=VARCHAR},
+      </if>
+      <if test="letter != null">
+        letter = #{letter,jdbcType=CHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cwh.entity.Brand">
+    update tb_brand
+    set `name` = #{name,jdbcType=VARCHAR},
+      image = #{image,jdbcType=VARCHAR},
+      letter = #{letter,jdbcType=CHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

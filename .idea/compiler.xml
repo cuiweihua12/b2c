@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="b2c-admin" />
+        <module name="b2c-search" />
+        <module name="b2c-api-gateway" />
+        <module name="b2c-upload" />
+        <module name="b2c-item-service" />
+        <module name="b2c-registry" />
+        <module name="b2c-item-interface" />
+        <module name="b2c-common" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="b2c-admin" options="-parameters" />
+      <module name="b2c-api-gateway" options="-parameters" />
+      <module name="b2c-common" options="-parameters" />
+      <module name="b2c-item" options="-parameters" />
+      <module name="b2c-item-interface" options="-parameters" />
+      <module name="b2c-item-service" options="-parameters" />
+      <module name="b2c-registry" options="-parameters" />
+      <module name="b2c-search" options="-parameters" />
+      <module name="b2c-upload" options="-parameters" />
+    </option>
+  </component>
+</project>

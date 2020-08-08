@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cwh.mapper.SpuMapper">
+  <resultMap id="BaseResultMap" type="com.cwh.entity.Spu">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="sub_title" jdbcType="VARCHAR" property="subTitle" />
+    <result column="cid1" jdbcType="BIGINT" property="cid1" />
+    <result column="cid2" jdbcType="BIGINT" property="cid2" />
+    <result column="cid3" jdbcType="BIGINT" property="cid3" />
+    <result column="brand_id" jdbcType="BIGINT" property="brandId" />
+    <result column="saleable" jdbcType="BOOLEAN" property="saleable" />
+    <result column="valid" jdbcType="BOOLEAN" property="valid" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, title, sub_title, cid1, cid2, cid3, brand_id, saleable, `valid`, create_time,
+    last_update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_spu
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+    <select id="selectConditionAll" resultType="com.cwh.entity.Spu">
+      SELECT
+      t.id,
+      t.title,
+      t.saleable,
+      t.valid,
+      t.`name` as brandName,
+      t2.create_time,
+      t2.last_update_time,
+      t2.sub_title,
+      t2.brand_id,
+      t2.categoryName ,
+      t2.cid1,
+      t2.cid2,
+      t2.cid3
+      FROM
+      (
+      SELECT
+      s.id,
+      s.title,
+      s.saleable,
+      s.valid,
+      b.NAME
+      FROM
+      tb_spu s,
+      tb_brand b
+      WHERE
+      s.brand_id = b.id
+      ) t
+      INNER JOIN (
+      SELECT
+      s.*,
+      GROUP_CONCAT( c.NAME SEPARATOR '/' ) AS categoryName
+      FROM
+      tb_spu s,
+      tb_category c
+      WHERE
+      s.cid1 = c.id
+      OR s.cid2 = c.id
+      OR s.cid3 = c.id
+      GROUP BY
+      s.id
+      ) t2 ON t.id = t2.id
+      <if test="search != null and search != ''">
+        and title like concat('%',#{search},'%')
+      </if>
+      <if test="saleable != null">
+        and t2.saleable = #{saleable}
+      </if>
+      <if test="sort != null and sort !=''">
+        <if test="sortBy != null and sortBy != ''">
+          ORDER BY ${sortBy} ${sort}
+        </if>
+      </if>
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from tb_spu
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.cwh.entity.Spu" useGeneratedKeys="true">
+    insert into tb_spu (title, sub_title, cid1,
+      cid2, cid3, brand_id, saleable,
+      `valid`, create_time, last_update_time
+      )
+    values (#{title,jdbcType=VARCHAR}, #{subTitle,jdbcType=VARCHAR}, #{cid1,jdbcType=BIGINT},
+      #{cid2,jdbcType=BIGINT}, #{cid3,jdbcType=BIGINT}, #{brandId,jdbcType=BIGINT}, #{saleable,jdbcType=BOOLEAN},
+      #{valid,jdbcType=BOOLEAN}, #{createTime,jdbcType=TIMESTAMP}, #{lastUpdateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.cwh.entity.Spu" useGeneratedKeys="true">
+    insert into tb_spu
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="title != null">
+        title,
+      </if>
+      <if test="subTitle != null">
+        sub_title,
+      </if>
+      <if test="cid1 != null">
+        cid1,
+      </if>
+      <if test="cid2 != null">
+        cid2,
+      </if>
+      <if test="cid3 != null">
+        cid3,
+      </if>
+      <if test="brandId != null">
+        brand_id,
+      </if>
+      <if test="saleable != null">
+        saleable,
+      </if>
+      <if test="valid != null">
+        `valid`,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="subTitle != null">
+        #{subTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="cid1 != null">
+        #{cid1,jdbcType=BIGINT},
+      </if>
+      <if test="cid2 != null">
+        #{cid2,jdbcType=BIGINT},
+      </if>
+      <if test="cid3 != null">
+        #{cid3,jdbcType=BIGINT},
+      </if>
+      <if test="brandId != null">
+        #{brandId,jdbcType=BIGINT},
+      </if>
+      <if test="saleable != null">
+        #{saleable,jdbcType=BOOLEAN},
+      </if>
+      <if test="valid != null">
+        #{valid,jdbcType=BOOLEAN},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateTime != null">
+        #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cwh.entity.Spu">
+    update tb_spu
+    <set>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="subTitle != null">
+        sub_title = #{subTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="cid1 != null">
+        cid1 = #{cid1,jdbcType=BIGINT},
+      </if>
+      <if test="cid2 != null">
+        cid2 = #{cid2,jdbcType=BIGINT},
+      </if>
+      <if test="cid3 != null">
+        cid3 = #{cid3,jdbcType=BIGINT},
+      </if>
+      <if test="brandId != null">
+        brand_id = #{brandId,jdbcType=BIGINT},
+      </if>
+      <if test="saleable != null">
+        saleable = #{saleable,jdbcType=BOOLEAN},
+      </if>
+      <if test="valid != null">
+        `valid` = #{valid,jdbcType=BOOLEAN},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time = #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cwh.entity.Spu">
+    update tb_spu
+    set title = #{title,jdbcType=VARCHAR},
+      sub_title = #{subTitle,jdbcType=VARCHAR},
+      cid1 = #{cid1,jdbcType=BIGINT},
+      cid2 = #{cid2,jdbcType=BIGINT},
+      cid3 = #{cid3,jdbcType=BIGINT},
+      brand_id = #{brandId,jdbcType=BIGINT},
+      saleable = #{saleable,jdbcType=BOOLEAN},
+      `valid` = #{valid,jdbcType=BOOLEAN},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      last_update_time = #{lastUpdateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

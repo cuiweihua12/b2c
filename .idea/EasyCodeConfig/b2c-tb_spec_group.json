@@ -1,0 +1,33 @@
+{
+  "name" : "TbSpecGroup",
+  "preName" : "",
+  "comment" : "规格参数的分组表，每个商品分类下有多个规格参数组",
+  "templateGroupName" : "Default",
+  "fullColumn" : [ {
+    "name" : "id",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "cid",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "name",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.cwh",
+  "savePath" : "./b2c-item/b2c-item-interface/src/main/java/com/cwh",
+  "saveModelName" : "b2c-item-interface"
+}

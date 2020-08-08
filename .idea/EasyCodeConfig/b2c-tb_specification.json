@@ -1,0 +1,26 @@
+{
+  "name" : "TbSpecification",
+  "preName" : "",
+  "comment" : "商品规格参数模板，json格式。",
+  "templateGroupName" : "Default",
+  "fullColumn" : [ {
+    "name" : "categoryId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "specifications",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.cwh",
+  "savePath" : "./b2c-item/b2c-item-interface/src/main/java/com/cwh",
+  "saveModelName" : "b2c-item-interface"
+}

@@ -1,0 +1,40 @@
+{
+  "name" : "TbStock",
+  "preName" : "",
+  "comment" : "库存表，代表库存，秒杀库存等信息",
+  "templateGroupName" : "Default",
+  "fullColumn" : [ {
+    "name" : "skuId",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "seckillStock",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "seckillTotal",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  }, {
+    "name" : "stock",
+    "comment" : null,
+    "type" : null,
+    "shortType" : null,
+    "custom" : false,
+    "ext" : { }
+  } ],
+  "pkColumn" : null,
+  "otherColumn" : null,
+  "savePackageName" : "com.cwh",
+  "savePath" : "./b2c-item/b2c-item-interface/src/main/java/com/cwh",
+  "saveModelName" : "b2c-item-interface"
+}

@@ -1,0 +1,294 @@
+2020-07-23 09:55:10.692  INFO 7500 --- [main] com.cwh.ExceptionTest                    : No active profile set, falling back to default profiles: default
+2020-07-23 09:55:15.175  INFO 7500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-23 09:55:15.222  INFO 7500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-23 09:55:15.439  INFO 7500 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56ms. Found 0 Redis repository interfaces.
+2020-07-23 09:55:15.844  WARN 7500 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-07-23 09:55:16.537  INFO 7500 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d1c74458-0e70-30aa-90a0-3c2f1b4975be
+2020-07-23 09:55:22.614  WARN 7500 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-23 09:55:22.614  INFO 7500 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-23 09:55:22.678  INFO 7500 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@52d9d817
+2020-07-23 09:55:24.303  INFO 7500 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-23 09:55:25.031  INFO 7500 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-23 09:55:26.884  WARN 7500 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-23 09:55:26.885  INFO 7500 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-23 09:55:28.915  WARN 7500 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-07-23 09:55:29.282  INFO 7500 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-07-23 09:55:29.395  INFO 7500 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-07-23 09:55:30.362  INFO 7500 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-07-23 09:55:30.362  INFO 7500 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-07-23 09:55:31.177  INFO 7500 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-07-23 09:55:31.178  INFO 7500 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-07-23 09:55:32.036  INFO 7500 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-07-23 09:55:32.457  INFO 7500 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-07-23 09:55:32.458  INFO 7500 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-07-23 09:55:32.458  INFO 7500 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-07-23 09:55:32.458  INFO 7500 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-07-23 09:55:32.458  INFO 7500 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-07-23 09:55:32.459  INFO 7500 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-07-23 09:55:32.459  INFO 7500 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-07-23 09:55:33.123  INFO 7500 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-07-23 09:55:33.126  INFO 7500 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
+2020-07-23 09:55:33.129  INFO 7500 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-23 09:55:33.141  INFO 7500 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1595469333139 with initial instances count: 2
+2020-07-23 09:55:33.160  INFO 7500 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UPLOAD-SERVICE with eureka with status UP
+2020-07-23 09:55:33.164  INFO 7500 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1595469333164, current=UP, previous=STARTING]
+2020-07-23 09:55:33.169  INFO 7500 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-23 09:55:33.168  INFO 7500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082: registering service...
+2020-07-23 09:55:33.244  INFO 7500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - registration status: 204
+2020-07-23 09:55:33.247  INFO 7500 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-23 09:55:33.381  INFO 7500 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-23 09:55:33.848  INFO 7500 --- [main] com.cwh.ExceptionTest                    : Started ExceptionTest in 27.439 seconds (JVM running for 30.456)
+2020-07-23 09:55:35.226  INFO 7500 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UPLOAD-SERVICE with eureka with status DOWN
+2020-07-23 09:55:35.226  WARN 7500 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1595469335226, current=DOWN, previous=UP]
+2020-07-23 09:55:35.227  INFO 7500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082: registering service...
+2020-07-23 09:55:35.239  INFO 7500 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - registration status: 204
+2020-07-23 09:55:35.243  INFO 7500 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-07-23 09:55:35.353  INFO 7500 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-07-23 09:55:38.354  INFO 7500 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-07-23 09:55:38.443  INFO 7500 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - deregister  status: 200
+2020-07-23 09:55:38.465  INFO 7500 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-07-23 10:44:14.757  INFO 21336 --- [main] com.cwh.ExceptionTest                    : No active profile set, falling back to default profiles: default
+2020-07-23 10:44:16.938  INFO 21336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-23 10:44:16.942  INFO 21336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-23 10:44:16.974  INFO 21336 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 Redis repository interfaces.
+2020-07-23 10:44:17.173  WARN 21336 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-07-23 10:44:17.627  INFO 21336 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d1c74458-0e70-30aa-90a0-3c2f1b4975be
+2020-07-23 10:44:21.899  WARN 21336 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-23 10:44:21.900  INFO 21336 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-23 10:44:21.979  INFO 21336 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@3e39e0fb
+2020-07-23 10:44:23.762  INFO 21336 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-23 10:44:24.345  INFO 21336 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-23 10:44:26.547  WARN 21336 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-23 10:44:26.547  INFO 21336 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-23 10:44:28.646  WARN 21336 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-07-23 10:44:29.115  INFO 21336 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-07-23 10:44:29.233  INFO 21336 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-07-23 10:44:30.263  INFO 21336 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-07-23 10:44:30.264  INFO 21336 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-07-23 10:44:30.942  INFO 21336 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-07-23 10:44:30.947  INFO 21336 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-07-23 10:44:31.363  INFO 21336 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-07-23 10:44:31.891  INFO 21336 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-07-23 10:44:31.892  INFO 21336 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-07-23 10:44:31.892  INFO 21336 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-07-23 10:44:31.892  INFO 21336 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-07-23 10:44:31.892  INFO 21336 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-07-23 10:44:31.893  INFO 21336 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-07-23 10:44:31.893  INFO 21336 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-07-23 10:44:32.330  INFO 21336 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-07-23 10:44:32.337  INFO 21336 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
+2020-07-23 10:44:32.342  INFO 21336 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-23 10:44:32.349  INFO 21336 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1595472272347 with initial instances count: 3
+2020-07-23 10:44:32.366  INFO 21336 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UPLOAD-SERVICE with eureka with status UP
+2020-07-23 10:44:32.366  INFO 21336 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1595472272366, current=UP, previous=STARTING]
+2020-07-23 10:44:32.371  INFO 21336 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082: registering service...
+2020-07-23 10:44:32.381  INFO 21336 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-23 10:44:32.437  INFO 21336 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - registration status: 204
+2020-07-23 10:44:32.455  INFO 21336 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-23 10:44:32.557  INFO 21336 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-23 10:44:32.889  INFO 21336 --- [main] com.cwh.ExceptionTest                    : Started ExceptionTest in 21.354 seconds (JVM running for 24.297)
+2020-07-23 10:44:34.140  INFO 21336 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UPLOAD-SERVICE with eureka with status DOWN
+2020-07-23 10:44:34.141  WARN 21336 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1595472274141, current=DOWN, previous=UP]
+2020-07-23 10:44:34.142  INFO 21336 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082: registering service...
+2020-07-23 10:44:34.148  INFO 21336 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - registration status: 204
+2020-07-23 10:44:34.150  INFO 21336 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-07-23 10:44:34.196  INFO 21336 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-07-23 10:44:37.198  INFO 21336 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-07-23 10:44:37.204  INFO 21336 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - deregister  status: 200
+2020-07-23 10:44:37.229  INFO 21336 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-07-23 10:47:10.688  INFO 20984 --- [main] com.cwh.ExceptionTest                    : No active profile set, falling back to default profiles: default
+2020-07-23 10:47:13.033  INFO 20984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-23 10:47:13.038  INFO 20984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-23 10:47:13.090  INFO 20984 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28ms. Found 0 Redis repository interfaces.
+2020-07-23 10:47:13.323  WARN 20984 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-07-23 10:47:13.815  INFO 20984 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d1c74458-0e70-30aa-90a0-3c2f1b4975be
+2020-07-23 10:47:17.694  WARN 20984 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-23 10:47:17.694  INFO 20984 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-23 10:47:17.740  INFO 20984 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@3e89f5bc
+2020-07-23 10:47:19.342  INFO 20984 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-23 10:47:19.916  INFO 20984 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-23 10:47:21.706  WARN 20984 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-23 10:47:21.707  INFO 20984 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-23 10:47:23.742  WARN 20984 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-07-23 10:47:24.162  INFO 20984 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-07-23 10:47:24.231  INFO 20984 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-07-23 10:47:25.243  INFO 20984 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-07-23 10:47:25.244  INFO 20984 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-07-23 10:47:25.976  INFO 20984 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-07-23 10:47:25.976  INFO 20984 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-07-23 10:47:26.482  INFO 20984 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-07-23 10:47:26.951  INFO 20984 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-07-23 10:47:26.951  INFO 20984 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-07-23 10:47:26.951  INFO 20984 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-07-23 10:47:26.951  INFO 20984 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-07-23 10:47:26.952  INFO 20984 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-07-23 10:47:26.952  INFO 20984 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-07-23 10:47:26.952  INFO 20984 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-07-23 10:47:27.417  INFO 20984 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-07-23 10:47:27.424  INFO 20984 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
+2020-07-23 10:47:27.429  INFO 20984 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-23 10:47:27.439  INFO 20984 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1595472447436 with initial instances count: 3
+2020-07-23 10:47:27.454  INFO 20984 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UPLOAD-SERVICE with eureka with status UP
+2020-07-23 10:47:27.455  INFO 20984 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1595472447455, current=UP, previous=STARTING]
+2020-07-23 10:47:27.460  INFO 20984 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082: registering service...
+2020-07-23 10:47:27.461  INFO 20984 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-23 10:47:27.533  INFO 20984 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - registration status: 204
+2020-07-23 10:47:27.561  INFO 20984 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-23 10:47:27.655  INFO 20984 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-23 10:47:27.999  INFO 20984 --- [main] com.cwh.ExceptionTest                    : Started ExceptionTest in 20.281 seconds (JVM running for 24.196)
+2020-07-23 10:47:29.245  INFO 20984 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UPLOAD-SERVICE with eureka with status DOWN
+2020-07-23 10:47:29.246  WARN 20984 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1595472449246, current=DOWN, previous=UP]
+2020-07-23 10:47:29.248  INFO 20984 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082: registering service...
+2020-07-23 10:47:29.258  INFO 20984 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - registration status: 204
+2020-07-23 10:47:29.262  INFO 20984 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-07-23 10:47:29.329  INFO 20984 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-07-23 10:47:32.333  INFO 20984 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-07-23 10:47:32.340  INFO 20984 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - deregister  status: 200
+2020-07-23 10:47:32.357  INFO 20984 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-07-23 11:01:09.503  INFO 11816 --- [main] com.cwh.ExceptionTest                    : No active profile set, falling back to default profiles: default
+2020-07-23 11:01:11.568  INFO 11816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-23 11:01:11.575  INFO 11816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-23 11:01:11.611  INFO 11816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2020-07-23 11:01:11.862  WARN 11816 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-07-23 11:01:12.343  INFO 11816 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d1c74458-0e70-30aa-90a0-3c2f1b4975be
+2020-07-23 11:01:16.086  WARN 11816 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-23 11:01:16.087  INFO 11816 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-23 11:01:16.140  INFO 11816 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@2c674d58
+2020-07-23 11:01:17.553  INFO 11816 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-23 11:01:18.074  INFO 11816 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-23 11:01:19.736  WARN 11816 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-23 11:01:19.739  INFO 11816 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-23 11:01:21.476  WARN 11816 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-07-23 11:01:21.778  INFO 11816 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-07-23 11:01:21.885  INFO 11816 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-07-23 11:01:22.781  INFO 11816 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-07-23 11:01:22.781  INFO 11816 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-07-23 11:01:23.453  INFO 11816 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-07-23 11:01:23.453  INFO 11816 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-07-23 11:01:23.924  INFO 11816 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-07-23 11:01:24.469  INFO 11816 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-07-23 11:01:24.469  INFO 11816 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-07-23 11:01:24.471  INFO 11816 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-07-23 11:01:24.472  INFO 11816 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-07-23 11:01:24.472  INFO 11816 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-07-23 11:01:24.472  INFO 11816 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-07-23 11:01:24.472  INFO 11816 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-07-23 11:01:24.935  INFO 11816 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-07-23 11:01:24.944  INFO 11816 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
+2020-07-23 11:01:24.949  INFO 11816 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-23 11:01:24.957  INFO 11816 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1595473284956 with initial instances count: 3
+2020-07-23 11:01:24.975  INFO 11816 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UPLOAD-SERVICE with eureka with status UP
+2020-07-23 11:01:24.976  INFO 11816 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1595473284976, current=UP, previous=STARTING]
+2020-07-23 11:01:24.979  INFO 11816 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082: registering service...
+2020-07-23 11:01:24.983  INFO 11816 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-23 11:01:25.052  INFO 11816 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - registration status: 204
+2020-07-23 11:01:25.078  INFO 11816 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-23 11:01:25.178  INFO 11816 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-23 11:01:25.533  INFO 11816 --- [main] com.cwh.ExceptionTest                    : Started ExceptionTest in 18.849 seconds (JVM running for 21.67)
+2020-07-23 11:01:26.795  INFO 11816 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UPLOAD-SERVICE with eureka with status DOWN
+2020-07-23 11:01:26.795  WARN 11816 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1595473286795, current=DOWN, previous=UP]
+2020-07-23 11:01:26.795  INFO 11816 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082: registering service...
+2020-07-23 11:01:26.802  INFO 11816 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-07-23 11:01:26.804  INFO 11816 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - registration status: 204
+2020-07-23 11:01:26.851  INFO 11816 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-07-23 11:01:29.853  INFO 11816 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-07-23 11:01:29.858  INFO 11816 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - deregister  status: 200
+2020-07-23 11:01:29.876  INFO 11816 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-07-23 11:04:44.820  INFO 24780 --- [main] com.cwh.ExceptionTest                    : No active profile set, falling back to default profiles: default
+2020-07-23 11:04:47.147  INFO 24780 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-23 11:04:47.151  INFO 24780 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-23 11:04:47.200  INFO 24780 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2020-07-23 11:04:47.417  WARN 24780 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-07-23 11:04:47.843  INFO 24780 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d1c74458-0e70-30aa-90a0-3c2f1b4975be
+2020-07-23 11:04:51.451  WARN 24780 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-23 11:04:51.451  INFO 24780 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-23 11:04:51.475  INFO 24780 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@148ab138
+2020-07-23 11:04:53.158  INFO 24780 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-23 11:04:53.653  INFO 24780 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-23 11:04:54.901  WARN 24780 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-23 11:04:54.902  INFO 24780 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-23 11:04:57.495  WARN 24780 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-07-23 11:04:57.818  INFO 24780 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-07-23 11:04:57.885  INFO 24780 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-07-23 11:04:58.583  INFO 24780 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-07-23 11:04:58.585  INFO 24780 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-07-23 11:04:59.132  INFO 24780 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-07-23 11:04:59.132  INFO 24780 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-07-23 11:04:59.529  INFO 24780 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-07-23 11:05:00.064  INFO 24780 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-07-23 11:05:00.087  INFO 24780 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-07-23 11:05:00.088  INFO 24780 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-07-23 11:05:00.088  INFO 24780 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-07-23 11:05:00.088  INFO 24780 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-07-23 11:05:00.088  INFO 24780 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-07-23 11:05:00.088  INFO 24780 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-07-23 11:05:00.449  INFO 24780 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-07-23 11:05:00.453  INFO 24780 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
+2020-07-23 11:05:00.455  INFO 24780 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-23 11:05:00.460  INFO 24780 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1595473500459 with initial instances count: 3
+2020-07-23 11:05:00.471  INFO 24780 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UPLOAD-SERVICE with eureka with status UP
+2020-07-23 11:05:00.472  INFO 24780 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1595473500472, current=UP, previous=STARTING]
+2020-07-23 11:05:00.478  INFO 24780 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-23 11:05:00.477  INFO 24780 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082: registering service...
+2020-07-23 11:05:00.519  INFO 24780 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-23 11:05:00.537  INFO 24780 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - registration status: 204
+2020-07-23 11:05:00.609  INFO 24780 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-23 11:05:00.947  INFO 24780 --- [main] com.cwh.ExceptionTest                    : Started ExceptionTest in 18.914 seconds (JVM running for 21.852)
+2020-07-23 11:05:01.428  INFO 24780 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UPLOAD-SERVICE with eureka with status DOWN
+2020-07-23 11:05:01.429  WARN 24780 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1595473501429, current=DOWN, previous=UP]
+2020-07-23 11:05:01.431  INFO 24780 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082: registering service...
+2020-07-23 11:05:01.440  INFO 24780 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - registration status: 204
+2020-07-23 11:05:01.441  INFO 24780 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-07-23 11:05:01.477  INFO 24780 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-07-23 11:05:04.483  INFO 24780 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-07-23 11:05:04.489  INFO 24780 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - deregister  status: 200
+2020-07-23 11:05:04.526  INFO 24780 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-07-23 11:07:08.064  INFO 3584 --- [main] com.cwh.ExceptionTest                    : No active profile set, falling back to default profiles: default
+2020-07-23 11:07:10.243  INFO 3584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-07-23 11:07:10.247  INFO 3584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-07-23 11:07:10.284  INFO 3584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Redis repository interfaces.
+2020-07-23 11:07:10.508  WARN 3584 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-07-23 11:07:10.873  INFO 3584 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d1c74458-0e70-30aa-90a0-3c2f1b4975be
+2020-07-23 11:07:14.583  WARN 3584 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-23 11:07:14.583  INFO 3584 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-23 11:07:14.621  INFO 3584 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@34beadce
+2020-07-23 11:07:16.174  INFO 3584 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-07-23 11:07:16.608  INFO 3584 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-23 11:07:17.809  WARN 3584 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-23 11:07:17.810  INFO 3584 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-23 11:07:19.750  WARN 3584 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-07-23 11:07:20.076  INFO 3584 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-07-23 11:07:20.131  INFO 3584 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-07-23 11:07:20.772  INFO 3584 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-07-23 11:07:20.774  INFO 3584 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-07-23 11:07:21.304  INFO 3584 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-07-23 11:07:21.305  INFO 3584 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-07-23 11:07:21.697  INFO 3584 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-07-23 11:07:22.232  INFO 3584 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-07-23 11:07:22.232  INFO 3584 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-07-23 11:07:22.233  INFO 3584 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-07-23 11:07:22.233  INFO 3584 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-07-23 11:07:22.233  INFO 3584 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-07-23 11:07:22.233  INFO 3584 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-07-23 11:07:22.233  INFO 3584 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-07-23 11:07:22.603  INFO 3584 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-07-23 11:07:22.610  INFO 3584 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
+2020-07-23 11:07:22.615  INFO 3584 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-23 11:07:22.622  INFO 3584 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1595473642620 with initial instances count: 3
+2020-07-23 11:07:22.630  INFO 3584 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UPLOAD-SERVICE with eureka with status UP
+2020-07-23 11:07:22.631  INFO 3584 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1595473642631, current=UP, previous=STARTING]
+2020-07-23 11:07:22.645  INFO 3584 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-23 11:07:22.649  INFO 3584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082: registering service...
+2020-07-23 11:07:22.699  INFO 3584 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-23 11:07:22.713  INFO 3584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - registration status: 204
+2020-07-23 11:07:22.782  INFO 3584 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-23 11:07:23.070  INFO 3584 --- [main] com.cwh.ExceptionTest                    : Started ExceptionTest in 18.064 seconds (JVM running for 20.684)
+2020-07-23 11:07:23.585  INFO 3584 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application UPLOAD-SERVICE with eureka with status DOWN
+2020-07-23 11:07:23.586  WARN 3584 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1595473643585, current=DOWN, previous=UP]
+2020-07-23 11:07:23.586  INFO 3584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082: registering service...
+2020-07-23 11:07:23.594  INFO 3584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - registration status: 204
+2020-07-23 11:07:23.595  INFO 3584 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-07-23 11:07:23.629  INFO 3584 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-07-23 11:07:26.632  INFO 3584 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-07-23 11:07:26.638  INFO 3584 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_UPLOAD-SERVICE/upload-service:8082 - deregister  status: 200
+2020-07-23 11:07:26.670  INFO 3584 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

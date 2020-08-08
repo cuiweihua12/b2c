@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cwh.mapper.CategoryMapper">
+  <resultMap id="BaseResultMap" type="com.cwh.entity.Category">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="parent_id" jdbcType="BIGINT" property="parentId" />
+    <result column="is_parent" jdbcType="BOOLEAN" property="isParent" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, `name`, parent_id, is_parent, sort
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_category
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectByPid" resultType="com.cwh.entity.Category">
+    select
+    <include refid="Base_Column_List" />
+    from tb_category
+    where  parent_id = #{parentId,jdbcType=BIGINT}
+  </select>
+  <!-- 通过品牌id 查询商品类别 -->
+  <select id="getCategoryByBrandId" resultType="com.cwh.entity.Category">
+    SELECT
+      c.id,
+      c.NAME,
+      c.parent_id,
+      c.is_parent,
+      c.sort
+    FROM
+        tb_brand b,
+        tb_category c,
+        tb_category_brand cb
+    WHERE
+        b.id = cb.brand_id
+        AND cb.category_id = c.id
+        AND b.id = #{bid}
+  </select>
+  <!-- 查询品牌分类信息 -->
+    <select id="selectBrandCategoryAll" resultType="com.cwh.entity.Category">
+      SELECT
+        c.id,
+        c.NAME,
+        c.parent_id,
+        c.is_parent,
+        c.sort
+      FROM
+          tb_category c,
+          tb_category_brand cb
+      WHERE
+          c.id = cb.category_id
+          AND cb.brand_id = #{id}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from tb_category
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.cwh.entity.Category" useGeneratedKeys="true">
+    insert into tb_category (`name`, parent_id, is_parent,
+      sort)
+    values (#{name,jdbcType=VARCHAR}, #{parentId,jdbcType=BIGINT}, #{isParent,jdbcType=BOOLEAN},
+      #{sort,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.cwh.entity.Category" useGeneratedKeys="true">
+    insert into tb_category
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        `name`,
+      </if>
+      <if test="parentId != null">
+        parent_id,
+      </if>
+      <if test="isParent != null">
+        is_parent,
+      </if>
+      <if test="sort != null">
+        sort,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="parentId != null">
+        #{parentId,jdbcType=BIGINT},
+      </if>
+      <if test="isParent != null">
+        #{isParent,jdbcType=BOOLEAN},
+      </if>
+      <if test="sort != null">
+        #{sort,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.cwh.entity.Category">
+    update tb_category
+    <set>
+      <if test="name != null">
+        `name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="parentId != null">
+        parent_id = #{parentId,jdbcType=BIGINT},
+      </if>
+      <if test="isParent != null">
+        is_parent = #{isParent,jdbcType=BOOLEAN},
+      </if>
+      <if test="sort != null">
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.cwh.entity.Category">
+    update tb_category
+    set `name` = #{name,jdbcType=VARCHAR},
+      parent_id = #{parentId,jdbcType=BIGINT},
+      is_parent = #{isParent,jdbcType=BOOLEAN},
+      sort = #{sort,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: api-gateway
+  redis:
+    database: 0
+    host: 127.0.0.1
+    password: 123456
+    port: 6379
+server:
+  port: 8889
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:8888/eureka
+    registry-fetch-interval-seconds: 5
+  instance:
+    ip-address: 127.0.0.1
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+zuul:
+  prefix: /api
+  retryable:  true
+  ribbon:
+    ConnectTimeout: 250 # 连接超时时间(ms)
+    ReadTimeout: 2000 # 通信超时时间(ms)
+    OkToRetryOnAllOperations: true # 是否对所有操作重试
+    MaxAutoRetriesNextServer: 1 # 同一服务不同实例的重试次数
+    MaxAutoRetries: 1 # 同一实例的重试次数
+  hystrix:
+    command:
+      default:
+        execution:
+          isolation:
+            thread:
+              timeoutInMillisecond: 10000 # 熔断超时时长：10000ms
+  routes:
+    # 将item-service服务映射到item
+    item-service: /item/**
+  #忽略路由的服务
+  ignored-services: upload-service
+  #忽略路由的路径
+  ignored-patterns: /upload/**

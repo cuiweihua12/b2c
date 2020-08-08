@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cwh.mapper.CategoryBrandMapper">
+  <resultMap id="BaseResultMap" type="com.cwh.entity.CategoryBrand">
+    <id column="category_id" jdbcType="BIGINT" property="categoryId" />
+    <id column="brand_id" jdbcType="BIGINT" property="brandId" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="com.cwh.entity.CategoryBrand">
+    delete from tb_category_brand
+    where category_id = #{categoryId,jdbcType=BIGINT}
+      and brand_id = #{brandId,jdbcType=BIGINT}
+  </delete>
+    <delete id="deleteByBrand">
+      delete from tb_category_brand
+    where  brand_id = #{brandId,jdbcType=BIGINT}
+    </delete>
+    <select id="selectCategoryByBrand" resultType="com.cwh.entity.CategoryBrand">
+      SELECT * FROM `tb_category_brand` where brand_id = #{id}
+    </select>
+    <insert id="insert" keyColumn="category_id" keyProperty="categoryId" parameterType="com.cwh.entity.CategoryBrand" useGeneratedKeys="true">
+    insert into tb_category_brand (brand_id,category_id)
+    values (#{brandId,jdbcType=BIGINT},#{categoryId})
+  </insert>
+  <insert id="insertSelective" keyColumn="category_id" keyProperty="categoryId" parameterType="com.cwh.entity.CategoryBrand" useGeneratedKeys="true">
+    insert into tb_category_brand
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="brandId != null">
+        brand_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="brandId != null">
+        #{brandId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+</mapper>
