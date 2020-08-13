@@ -62,6 +62,15 @@
       AND
         cb.category_id = #{cateGoryId}
     </select>
+    <select id="queryByIdList" resultType="com.cwh.entity.Brand">
+        select
+            <include refid="Base_Column_List" />
+        from tb_brand
+        where id in
+        <foreach collection="ids" item="id"  separator="," index="" open="(" close=")">
+          #{id}
+        </foreach>
+    </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from tb_brand
     where id = #{id,jdbcType=BIGINT}

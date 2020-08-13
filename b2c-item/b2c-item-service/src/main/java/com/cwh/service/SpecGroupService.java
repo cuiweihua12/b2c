@@ -16,4 +16,6 @@ public interface SpecGroupService {
     Integer deleteGroup(Long id);
 
     SpecList getSearchGroupParmas(Long categoryId);
+
+    List<SpecParam> getSpecParamsByCidList(List<Long> cids);
 }

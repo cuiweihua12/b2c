@@ -5,12 +5,10 @@ import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -24,7 +22,6 @@ import java.util.concurrent.TimeUnit;
  * @author: cuiweihua
  * @create: 2020-07-19 11:59
  */
-@Component
 public class RepeatRequestFilter extends ZuulFilter {
 
     private Log logger = LogFactory.getLog(getClass());

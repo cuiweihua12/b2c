@@ -80,6 +80,11 @@
             <artifactId>fastdfs-client</artifactId>
             <version>1.26.5</version>
         </dependency>
+        <!-- feign  -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
 
 
         <!--帮助开发人员快速生成API文档-->

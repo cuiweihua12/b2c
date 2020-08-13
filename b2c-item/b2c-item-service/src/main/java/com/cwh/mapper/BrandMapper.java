@@ -6,7 +6,6 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-import java.util.Map;
 
 @Mapper
 public interface BrandMapper {
@@ -27,4 +26,6 @@ public interface BrandMapper {
     List<Brand> selectAll(@Param("sort") String sort,@Param("sortBy") String sortBy, @Param("name") String name);
 
     List<Brand> selectBrandByCategoryId(@Param("cateGoryId") Long cateGoryId);
+
+    List<Brand> queryByIdList(@Param("ids") List<Long> ids);
 }

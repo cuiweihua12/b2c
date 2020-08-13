@@ -75,4 +75,9 @@ public class SpecGroupServiceImpl implements SpecGroupService {
         specList.setGroup(specGroups);
         return specList;
     }
+
+    @Override
+    public List<SpecParam> getSpecParamsByCidList(List<Long> cids) {
+        return specParamMapper.selectByIdList(cids);
+    }
 }

@@ -2,6 +2,8 @@ package com.cwh;
 
 import com.cwh.client.ConnectionBrandClient;
 import com.cwh.client.ConnectionGoodsClient;
+import com.cwh.client.ConnectionSpecClient;
+import com.cwh.service.impl.GoodsCwhServiceImpl;
 import com.cwh.service.impl.GoodsServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,6 +26,9 @@ public class GoodsTest {
 
     @Autowired
     private ConnectionBrandClient brandClient;
+
+    @Autowired
+    private ConnectionSpecClient specClient;
     @Test
     public void goodsList(){
         connectionGoodsClient
@@ -35,11 +40,17 @@ public class GoodsTest {
 
     @Autowired
     GoodsServiceImpl goodsService;
+
+    @Autowired
+    GoodsCwhServiceImpl cwhService;
+
+    //自己做
     @Test
     public  void Test(){
-        goodsService.getGoods();
+        cwhService.getGoods();
     }
 
+    //上课讲
     @Test
     public void test1(){
 //        System.out.println(brandClient.queryByBrandId(235L).getBody());
@@ -55,5 +66,10 @@ public class GoodsTest {
             if (count == 10){break;}
         }
         System.out.println("循环结束");
+    }
+
+    @Test
+    public void test4(){
+        specClient.searchSpecParamsBySpecGroupId(null,76l).getBody().forEach(System.out::println);
     }
 }

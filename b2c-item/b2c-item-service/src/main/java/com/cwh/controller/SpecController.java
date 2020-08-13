@@ -105,4 +105,11 @@ public class SpecController {
     public ResponseEntity<SpecList> getSpecificationByCategroupId(@PathVariable("cid") Long categoryId){
         return ResponseEntity.ok(specGroupService.getSearchGroupParmas(categoryId));
     }
+
+    @GetMapping(value = "specParams/{cids}",produces = "application/json;charset=UTF-8")
+    @ApiImplicitParam(name = "cids",value = "分类id集合",required = true,type = "List<Long>")
+    @ApiOperation("根据分类id集合获取规格参数")
+    public ResponseEntity<List<SpecParam>> getSpecParamsByCidList(@PathVariable("cids") List<Long> cids){
+        return ResponseEntity.ok(specGroupService.getSpecParamsByCidList(cids));
+    }
 }

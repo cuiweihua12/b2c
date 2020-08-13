@@ -70,4 +70,8 @@ public interface BrandClient {
     @ApiOperation(value = "根据分类id查询品牌信息")
     @ApiParam(name = "cateGoryId",value = "商品分类id",required = true)
     public ResponseEntity<List<Brand>> queryBrandByCategoryId(@PathVariable("cId") Long cateGoryId);
+
+    @GetMapping("queryByIdList/{ids}")
+    @ApiOperation(("根据id集合查询品牌信息"))
+    public ResponseEntity<List<Brand>> queryByIdList(@PathVariable("ids") List<Long> ids);
 }

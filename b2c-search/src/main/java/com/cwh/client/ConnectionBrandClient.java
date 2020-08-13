@@ -7,6 +7,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 /**
  * @author CWH
  */
-@FeignClient(value=ServiceConstant.ITEMSERVICE)
+@FeignClient(value= ServiceConstant.ITEMSERVICE)
 public interface ConnectionBrandClient extends BrandClient {
+
 }

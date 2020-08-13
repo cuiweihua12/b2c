@@ -61,4 +61,9 @@ public interface SpecClient {
     @ApiImplicitParam(name = "categoryId",value = "分类id",required = true,type = "Long")
     @ApiOperation("获取规格参数模板")
     public ResponseEntity<SpecList> getSpecificationByCategroupId(@PathVariable("cid") Long categoryId);
+
+    @GetMapping(value = "specParams/{cids}",produces = "application/json;charset=UTF-8")
+    @ApiImplicitParam(name = "cids",value = "分类id集合",required = true,type = "List<Long>")
+    @ApiOperation("根据分类id集合获取规格参数")
+    public ResponseEntity<List<SpecParam>> getSpecParamsByCidList(@PathVariable("cids") List<Long> cids);
 }

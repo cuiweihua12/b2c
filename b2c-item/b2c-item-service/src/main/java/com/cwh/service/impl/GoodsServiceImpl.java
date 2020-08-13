@@ -98,6 +98,7 @@ public class GoodsServiceImpl implements GoodsService {
             }
             stockList.add(stock);
         }
+
         return null;
     }
 

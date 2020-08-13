@@ -1,0 +1,760 @@
+2020-08-13 08:08:42.475  INFO 15620 --- [main] com.cwh.HgihtTest                        : No active profile set, falling back to default profiles: default
+2020-08-13 08:08:43.852  INFO 15620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:08:43.855  INFO 15620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:08:44.302  INFO 15620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 431ms. Found 2 Elasticsearch repository interfaces.
+2020-08-13 08:08:44.331  INFO 15620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:08:44.332  INFO 15620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:08:44.362  INFO 15620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-08-13 08:08:44.414  INFO 15620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:08:44.418  INFO 15620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-08-13 08:08:44.463  INFO 15620 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsCWHRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:08:44.465  INFO 15620 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:08:44.465  INFO 15620 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Redis repository interfaces.
+2020-08-13 08:08:45.105  INFO 15620 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a4f2f0f3-48cb-3145-b79e-e6f1922ba31a
+2020-08-13 08:08:45.646  INFO 15620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionBrandClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:08:45.648  INFO 15620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionCategoryClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:08:45.649  INFO 15620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionGoodsClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:08:45.651  INFO 15620 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionSpecClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:08:47.205  INFO 15620 --- [main] o.elasticsearch.plugins.PluginsService   : no modules loaded
+2020-08-13 08:08:47.206  INFO 15620 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2020-08-13 08:08:47.206  INFO 15620 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020-08-13 08:08:47.207  INFO 15620 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020-08-13 08:08:47.207  INFO 15620 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2020-08-13 08:08:47.207  INFO 15620 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020-08-13 08:08:51.386  INFO 15620 --- [main] o.s.d.e.c.TransportClientFactoryBean     : Adding transport node : 192.168.138.128:9300
+2020-08-13 08:08:54.724 ERROR 15620 --- [main] .d.e.r.s.AbstractElasticsearchRepository : failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{f3dqfOs1TAy0M_cVuP6EzA}{192.168.138.128}{192.168.138.128:9300}]
+2020-08-13 08:08:55.491 ERROR 15620 --- [main] .d.e.r.s.AbstractElasticsearchRepository : failed to load elasticsearch nodes : org.elasticsearch.client.transport.NoNodeAvailableException: None of the configured nodes are available: [{#transport#-1}{f3dqfOs1TAy0M_cVuP6EzA}{192.168.138.128}{192.168.138.128:9300}]
+2020-08-13 08:08:56.779  WARN 15620 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:08:56.779  INFO 15620 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:08:56.820  WARN 15620 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:08:56.821  INFO 15620 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:08:57.583  INFO 15620 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-13 08:09:00.797  WARN 15620 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-08-13 08:09:01.056  INFO 15620 --- [main] com.cwh.HgihtTest                        : Started HgihtTest in 20.975 seconds (JVM running for 25.259)
+2020-08-13 08:09:02.242  INFO 15620 --- [SpringContextShutdownHook] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-08-13 08:09:02.259  INFO 15620 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SEARCH-SERVICE with eureka with status DOWN
+2020-08-13 08:09:02.275  INFO 15620 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-08-13 08:09:02.276  INFO 15620 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-13 08:10:52.462  INFO 10840 --- [main] com.cwh.HgihtTest                        : No active profile set, falling back to default profiles: default
+2020-08-13 08:10:53.524  INFO 10840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:10:53.528  INFO 10840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:10:53.854  INFO 10840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 318ms. Found 2 Elasticsearch repository interfaces.
+2020-08-13 08:10:53.863  INFO 10840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:10:53.864  INFO 10840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:10:53.881  INFO 10840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-08-13 08:10:53.911  INFO 10840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:10:53.917  INFO 10840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-08-13 08:10:53.944  INFO 10840 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsCWHRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:10:53.945  INFO 10840 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:10:53.945  INFO 10840 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2020-08-13 08:10:54.638  INFO 10840 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a4f2f0f3-48cb-3145-b79e-e6f1922ba31a
+2020-08-13 08:10:55.044  INFO 10840 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionBrandClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:10:55.046  INFO 10840 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionCategoryClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:10:55.050  INFO 10840 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionGoodsClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:10:55.052  INFO 10840 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionSpecClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:10:56.236  INFO 10840 --- [main] o.elasticsearch.plugins.PluginsService   : no modules loaded
+2020-08-13 08:10:56.238  INFO 10840 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2020-08-13 08:10:56.238  INFO 10840 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020-08-13 08:10:56.238  INFO 10840 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020-08-13 08:10:56.238  INFO 10840 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2020-08-13 08:10:56.238  INFO 10840 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020-08-13 08:10:58.571  INFO 10840 --- [main] o.s.d.e.c.TransportClientFactoryBean     : Adding transport node : 192.168.138.128:9300
+2020-08-13 08:11:02.350  WARN 10840 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:11:02.351  INFO 10840 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:11:02.364  WARN 10840 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:11:02.364  INFO 10840 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:11:03.389  INFO 10840 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-13 08:11:07.238  WARN 10840 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-08-13 08:11:07.583  INFO 10840 --- [main] com.cwh.HgihtTest                        : Started HgihtTest in 17.247 seconds (JVM running for 20.949)
+2020-08-13 08:11:09.416  INFO 10840 --- [main] c.netflix.config.ChainedDynamicProperty  : Flipping property: ITEM-SERVICE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-08-13 08:11:09.514  INFO 10840 --- [main] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-ITEM-SERVICE
+2020-08-13 08:11:09.515  INFO 10840 --- [main] c.netflix.loadbalancer.BaseLoadBalancer  : Client: ITEM-SERVICE instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=ITEM-SERVICE,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-08-13 08:11:09.528  INFO 10840 --- [main] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2020-08-13 08:11:09.565  INFO 10840 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-08-13 08:11:09.607  INFO 10840 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-08-13 08:11:09.718  INFO 10840 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-08-13 08:11:09.718  INFO 10840 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-08-13 08:11:10.071  INFO 10840 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-08-13 08:11:10.072  INFO 10840 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-08-13 08:11:10.431  INFO 10840 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-08-13 08:11:10.825  INFO 10840 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-08-13 08:11:10.826  INFO 10840 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-08-13 08:11:10.826  INFO 10840 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-08-13 08:11:10.826  INFO 10840 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-08-13 08:11:10.827  INFO 10840 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-08-13 08:11:10.827  INFO 10840 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-08-13 08:11:10.827  INFO 10840 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-08-13 08:11:11.252  INFO 10840 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-08-13 08:11:11.256  INFO 10840 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-08-13 08:11:11.259  INFO 10840 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-08-13 08:11:11.264  INFO 10840 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1597277471263 with initial instances count: 2
+2020-08-13 08:11:11.324  INFO 10840 --- [main] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client ITEM-SERVICE initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=ITEM-SERVICE,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: [[Server:127.0.0.1:8081;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@3c596a57
+2020-08-13 08:11:11.327  INFO 10840 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: ITEM-SERVICE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-08-13 08:11:12.894  INFO 10840 --- [main] c.cwh.service.impl.GoodsCwhServiceImpl   : {
+  "bool" : {
+    "should" : [
+      {
+        "match" : {
+          "title" : {
+            "query" : "华为",
+            "operator" : "OR",
+            "prefix_length" : 0,
+            "max_expansions" : 50,
+            "fuzzy_transpositions" : true,
+            "lenient" : false,
+            "zero_terms_query" : "NONE",
+            "auto_generate_synonyms_phrase_query" : true,
+            "boost" : 1.0
+          }
+        }
+      },
+      {
+        "match" : {
+          "brand" : {
+            "query" : "华为",
+            "operator" : "OR",
+            "prefix_length" : 0,
+            "max_expansions" : 50,
+            "fuzzy_transpositions" : true,
+            "lenient" : false,
+            "zero_terms_query" : "NONE",
+            "auto_generate_synonyms_phrase_query" : true,
+            "boost" : 1.0
+          }
+        }
+      },
+      {
+        "match" : {
+          "category" : {
+            "query" : "华为",
+            "operator" : "OR",
+            "prefix_length" : 0,
+            "max_expansions" : 50,
+            "fuzzy_transpositions" : true,
+            "lenient" : false,
+            "zero_terms_query" : "NONE",
+            "auto_generate_synonyms_phrase_query" : true,
+            "boost" : 1.0
+          }
+        }
+      }
+    ],
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
+2020-08-13 08:11:12.973  INFO 10840 --- [Thread-8] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2020-08-13 08:11:12.976  INFO 10840 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SEARCH-SERVICE with eureka with status DOWN
+2020-08-13 08:11:12.979  WARN 10840 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1597277472979, current=DOWN, previous=STARTING]
+2020-08-13 08:11:12.991  INFO 10840 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SEARCH-SERVICE/search-service:-1: registering service...
+2020-08-13 08:11:12.998  INFO 10840 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-08-13 08:11:13.000  INFO 10840 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-13 08:11:13.062  INFO 10840 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SEARCH-SERVICE/search-service:-1 - registration status: 204
+2020-08-13 08:11:13.066  INFO 10840 --- [SpringContextShutdownHook] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-ITEM-SERVICE
+2020-08-13 08:11:13.091  INFO 10840 --- [SpringContextShutdownHook] c.n.u.concurrent.ShutdownEnabledTimer    : Exception caught (might be ok if at shutdown)
+
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82) ~[na:1.8.0_65]
+	at java.lang.Runtime.removeShutdownHook(Runtime.java:239) ~[na:1.8.0_65]
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70) ~[netflix-commons-util-0.3.0.jar:0.3.0]
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:339) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:273) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92) [spring-cloud-context-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+
+2020-08-13 08:11:14.048  INFO 10840 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-08-13 08:11:17.051  WARN 10840 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2020-08-13 08:11:17.052  INFO 10840 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-08-13 08:11:17.058  INFO 10840 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SEARCH-SERVICE/search-service:-1 - deregister  status: 200
+2020-08-13 08:11:17.076  INFO 10840 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-08-13 08:13:32.289  INFO 9884 --- [main] com.cwh.HgihtTest                        : No active profile set, falling back to default profiles: default
+2020-08-13 08:13:33.449  INFO 9884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:13:33.451  INFO 9884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:13:33.758  INFO 9884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 298ms. Found 2 Elasticsearch repository interfaces.
+2020-08-13 08:13:33.765  INFO 9884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:13:33.766  INFO 9884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:13:33.786  INFO 9884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-08-13 08:13:33.819  INFO 9884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:13:33.822  INFO 9884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-08-13 08:13:33.851  INFO 9884 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsCWHRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:13:33.852  INFO 9884 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:13:33.853  INFO 9884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-08-13 08:13:34.475  INFO 9884 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a4f2f0f3-48cb-3145-b79e-e6f1922ba31a
+2020-08-13 08:13:34.804  INFO 9884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionBrandClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:13:34.810  INFO 9884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionCategoryClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:13:34.812  INFO 9884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionGoodsClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:13:34.815  INFO 9884 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionSpecClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:13:35.990  INFO 9884 --- [main] o.elasticsearch.plugins.PluginsService   : no modules loaded
+2020-08-13 08:13:35.992  INFO 9884 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2020-08-13 08:13:35.992  INFO 9884 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020-08-13 08:13:35.992  INFO 9884 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020-08-13 08:13:35.992  INFO 9884 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2020-08-13 08:13:35.992  INFO 9884 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020-08-13 08:13:38.285  INFO 9884 --- [main] o.s.d.e.c.TransportClientFactoryBean     : Adding transport node : 192.168.138.128:9300
+2020-08-13 08:13:42.094  WARN 9884 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:13:42.095  INFO 9884 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:13:42.113  WARN 9884 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:13:42.113  INFO 9884 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:13:42.860  INFO 9884 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-13 08:13:45.924  INFO 9884 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-08-13 08:13:47.549  INFO 9884 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-08-13 08:13:47.637  WARN 9884 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-08-13 08:13:47.924  INFO 9884 --- [main] com.cwh.HgihtTest                        : Started HgihtTest in 19.633 seconds (JVM running for 23.19)
+2020-08-13 08:13:49.259  INFO 9884 --- [main] c.netflix.config.ChainedDynamicProperty  : Flipping property: ITEM-SERVICE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-08-13 08:13:49.336  INFO 9884 --- [main] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-ITEM-SERVICE
+2020-08-13 08:13:49.337  INFO 9884 --- [main] c.netflix.loadbalancer.BaseLoadBalancer  : Client: ITEM-SERVICE instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=ITEM-SERVICE,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-08-13 08:13:49.350  INFO 9884 --- [main] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2020-08-13 08:13:49.373  INFO 9884 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-08-13 08:13:49.399  INFO 9884 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-08-13 08:13:49.489  INFO 9884 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-08-13 08:13:49.489  INFO 9884 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-08-13 08:13:49.766  INFO 9884 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-08-13 08:13:49.767  INFO 9884 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-08-13 08:13:50.212  INFO 9884 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-08-13 08:13:50.586  INFO 9884 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-08-13 08:13:50.586  INFO 9884 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-08-13 08:13:50.586  INFO 9884 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-08-13 08:13:50.586  INFO 9884 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-08-13 08:13:50.586  INFO 9884 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-08-13 08:13:50.587  INFO 9884 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-08-13 08:13:50.587  INFO 9884 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-08-13 08:13:50.871  INFO 9884 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-08-13 08:13:50.876  INFO 9884 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-08-13 08:13:50.883  INFO 9884 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-08-13 08:13:50.889  INFO 9884 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1597277630887 with initial instances count: 2
+2020-08-13 08:13:50.962  INFO 9884 --- [main] c.netflix.config.ChainedDynamicProperty  : Flipping property: ITEM-SERVICE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-08-13 08:13:50.967  INFO 9884 --- [main] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client ITEM-SERVICE initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=ITEM-SERVICE,current list of Servers=[127.0.0.1:8081],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:127.0.0.1:8081;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@7615eb9f
+2020-08-13 08:13:51.489  INFO 9884 --- [main] c.cwh.service.impl.GoodsCwhServiceImpl   : {
+  "bool" : {
+    "should" : [
+      {
+        "match" : {
+          "title" : {
+            "query" : "华为",
+            "operator" : "OR",
+            "prefix_length" : 0,
+            "max_expansions" : 50,
+            "fuzzy_transpositions" : true,
+            "lenient" : false,
+            "zero_terms_query" : "NONE",
+            "auto_generate_synonyms_phrase_query" : true,
+            "boost" : 1.0
+          }
+        }
+      },
+      {
+        "match" : {
+          "brand" : {
+            "query" : "华为",
+            "operator" : "OR",
+            "prefix_length" : 0,
+            "max_expansions" : 50,
+            "fuzzy_transpositions" : true,
+            "lenient" : false,
+            "zero_terms_query" : "NONE",
+            "auto_generate_synonyms_phrase_query" : true,
+            "boost" : 1.0
+          }
+        }
+      },
+      {
+        "match" : {
+          "category" : {
+            "query" : "华为",
+            "operator" : "OR",
+            "prefix_length" : 0,
+            "max_expansions" : 50,
+            "fuzzy_transpositions" : true,
+            "lenient" : false,
+            "zero_terms_query" : "NONE",
+            "auto_generate_synonyms_phrase_query" : true,
+            "boost" : 1.0
+          }
+        }
+      }
+    ],
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
+2020-08-13 08:13:51.640  INFO 9884 --- [Thread-8] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2020-08-13 08:13:51.643  INFO 9884 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SEARCH-SERVICE with eureka with status DOWN
+2020-08-13 08:13:51.644  WARN 9884 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1597277631644, current=DOWN, previous=STARTING]
+2020-08-13 08:13:51.649  INFO 9884 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SEARCH-SERVICE/search-service:-1: registering service...
+2020-08-13 08:13:51.660  INFO 9884 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-08-13 08:13:51.661  INFO 9884 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-13 08:13:51.708  INFO 9884 --- [SpringContextShutdownHook] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-ITEM-SERVICE
+2020-08-13 08:13:51.720  INFO 9884 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SEARCH-SERVICE/search-service:-1 - registration status: 204
+2020-08-13 08:13:51.720  INFO 9884 --- [SpringContextShutdownHook] c.n.u.concurrent.ShutdownEnabledTimer    : Exception caught (might be ok if at shutdown)
+
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82) ~[na:1.8.0_65]
+	at java.lang.Runtime.removeShutdownHook(Runtime.java:239) ~[na:1.8.0_65]
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70) ~[netflix-commons-util-0.3.0.jar:0.3.0]
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:339) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:273) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92) [spring-cloud-context-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+
+2020-08-13 08:13:52.718  INFO 9884 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-08-13 08:13:55.722  INFO 9884 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-08-13 08:13:55.730  INFO 9884 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SEARCH-SERVICE/search-service:-1 - deregister  status: 200
+2020-08-13 08:13:55.750  INFO 9884 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-08-13 08:22:17.123  INFO 6464 --- [main] com.cwh.HgihtTest                        : No active profile set, falling back to default profiles: default
+2020-08-13 08:22:18.071  INFO 6464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:22:18.073  INFO 6464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:22:18.380  INFO 6464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 297ms. Found 2 Elasticsearch repository interfaces.
+2020-08-13 08:22:18.388  INFO 6464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:22:18.389  INFO 6464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:22:18.407  INFO 6464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-08-13 08:22:18.436  INFO 6464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:22:18.439  INFO 6464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-08-13 08:22:18.467  INFO 6464 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsCWHRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:22:18.468  INFO 6464 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:22:18.468  INFO 6464 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-08-13 08:22:19.018  INFO 6464 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a4f2f0f3-48cb-3145-b79e-e6f1922ba31a
+2020-08-13 08:22:19.355  INFO 6464 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionBrandClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:22:19.357  INFO 6464 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionCategoryClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:22:19.360  INFO 6464 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionGoodsClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:22:19.363  INFO 6464 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionSpecClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:22:20.538  INFO 6464 --- [main] o.elasticsearch.plugins.PluginsService   : no modules loaded
+2020-08-13 08:22:20.539  INFO 6464 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2020-08-13 08:22:20.540  INFO 6464 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020-08-13 08:22:20.540  INFO 6464 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020-08-13 08:22:20.540  INFO 6464 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2020-08-13 08:22:20.540  INFO 6464 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020-08-13 08:22:22.881  INFO 6464 --- [main] o.s.d.e.c.TransportClientFactoryBean     : Adding transport node : 192.168.138.128:9300
+2020-08-13 08:22:25.916  WARN 6464 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:22:25.917  INFO 6464 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:22:25.927  WARN 6464 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:22:25.928  INFO 6464 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:22:26.552  INFO 6464 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-13 08:22:29.332  INFO 6464 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-08-13 08:22:30.916  INFO 6464 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-08-13 08:22:31.009  WARN 6464 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-08-13 08:22:31.323  INFO 6464 --- [main] com.cwh.HgihtTest                        : Started HgihtTest in 19.394 seconds (JVM running for 21.69)
+2020-08-13 08:22:32.051  INFO 6464 --- [SpringContextShutdownHook] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-08-13 08:22:32.057  INFO 6464 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SEARCH-SERVICE with eureka with status DOWN
+2020-08-13 08:22:32.071  INFO 6464 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-08-13 08:22:32.072  INFO 6464 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-13 08:24:19.139  INFO 25896 --- [main] com.cwh.HgihtTest                        : No active profile set, falling back to default profiles: default
+2020-08-13 08:24:20.522  INFO 25896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:24:20.525  INFO 25896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:24:20.870  INFO 25896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 338ms. Found 2 Elasticsearch repository interfaces.
+2020-08-13 08:24:20.879  INFO 25896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:24:20.880  INFO 25896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:24:20.898  INFO 25896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-08-13 08:24:20.925  INFO 25896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:24:20.928  INFO 25896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-08-13 08:24:20.960  INFO 25896 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsCWHRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:24:20.961  INFO 25896 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:24:20.961  INFO 25896 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2020-08-13 08:24:21.601  INFO 25896 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a4f2f0f3-48cb-3145-b79e-e6f1922ba31a
+2020-08-13 08:24:21.978  INFO 25896 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionBrandClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:24:21.980  INFO 25896 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionCategoryClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:24:21.985  INFO 25896 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionGoodsClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:24:21.987  INFO 25896 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionSpecClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:24:23.063  INFO 25896 --- [main] o.elasticsearch.plugins.PluginsService   : no modules loaded
+2020-08-13 08:24:23.065  INFO 25896 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2020-08-13 08:24:23.066  INFO 25896 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020-08-13 08:24:23.066  INFO 25896 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020-08-13 08:24:23.066  INFO 25896 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2020-08-13 08:24:23.066  INFO 25896 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020-08-13 08:24:25.690  INFO 25896 --- [main] o.s.d.e.c.TransportClientFactoryBean     : Adding transport node : 192.168.138.128:9300
+2020-08-13 08:24:33.709  WARN 25896 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:24:33.709  INFO 25896 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:24:33.718  WARN 25896 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:24:33.719  INFO 25896 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:24:34.655  INFO 25896 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-13 08:24:38.053  INFO 25896 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-08-13 08:24:39.774  INFO 25896 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-08-13 08:24:39.876  WARN 25896 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-08-13 08:24:40.182  INFO 25896 --- [main] com.cwh.HgihtTest                        : Started HgihtTest in 25.105 seconds (JVM running for 32.814)
+2020-08-13 08:24:41.120  INFO 25896 --- [SpringContextShutdownHook] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-08-13 08:24:41.137  INFO 25896 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SEARCH-SERVICE with eureka with status DOWN
+2020-08-13 08:24:41.171  INFO 25896 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-08-13 08:24:41.177  INFO 25896 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-13 08:26:31.924  INFO 25316 --- [main] com.cwh.HgihtTest                        : No active profile set, falling back to default profiles: default
+2020-08-13 08:26:33.091  INFO 25316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:26:33.094  INFO 25316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:26:33.442  INFO 25316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 339ms. Found 2 Elasticsearch repository interfaces.
+2020-08-13 08:26:33.451  INFO 25316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:26:33.452  INFO 25316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:26:33.471  INFO 25316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-08-13 08:26:33.511  INFO 25316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:26:33.518  INFO 25316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-08-13 08:26:33.552  INFO 25316 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsCWHRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:26:33.553  INFO 25316 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:26:33.554  INFO 25316 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2020-08-13 08:26:34.149  INFO 25316 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a4f2f0f3-48cb-3145-b79e-e6f1922ba31a
+2020-08-13 08:26:34.489  INFO 25316 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionBrandClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:26:34.491  INFO 25316 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionCategoryClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:26:34.497  INFO 25316 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionGoodsClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:26:34.500  INFO 25316 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionSpecClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:26:35.524  INFO 25316 --- [main] o.elasticsearch.plugins.PluginsService   : no modules loaded
+2020-08-13 08:26:35.526  INFO 25316 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2020-08-13 08:26:35.526  INFO 25316 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020-08-13 08:26:35.526  INFO 25316 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020-08-13 08:26:35.526  INFO 25316 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2020-08-13 08:26:35.526  INFO 25316 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020-08-13 08:26:37.714  INFO 25316 --- [main] o.s.d.e.c.TransportClientFactoryBean     : Adding transport node : 192.168.138.128:9300
+2020-08-13 08:26:40.790  WARN 25316 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:26:40.790  INFO 25316 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:26:40.802  WARN 25316 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:26:40.803  INFO 25316 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:26:41.527  INFO 25316 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-13 08:26:44.552  INFO 25316 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-08-13 08:26:46.150  INFO 25316 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-08-13 08:26:46.229  WARN 25316 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-08-13 08:26:46.503  INFO 25316 --- [main] com.cwh.HgihtTest                        : Started HgihtTest in 18.696 seconds (JVM running for 21.83)
+2020-08-13 08:26:47.635  INFO 25316 --- [main] c.netflix.config.ChainedDynamicProperty  : Flipping property: ITEM-SERVICE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-08-13 08:26:47.714  INFO 25316 --- [main] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-ITEM-SERVICE
+2020-08-13 08:26:47.715  INFO 25316 --- [main] c.netflix.loadbalancer.BaseLoadBalancer  : Client: ITEM-SERVICE instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=ITEM-SERVICE,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-08-13 08:26:47.729  INFO 25316 --- [main] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2020-08-13 08:26:47.748  INFO 25316 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-08-13 08:26:47.776  INFO 25316 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-08-13 08:26:47.870  INFO 25316 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-08-13 08:26:47.870  INFO 25316 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-08-13 08:26:48.149  INFO 25316 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-08-13 08:26:48.150  INFO 25316 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-08-13 08:26:48.500  INFO 25316 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-08-13 08:26:48.785  INFO 25316 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-08-13 08:26:48.786  INFO 25316 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-08-13 08:26:48.786  INFO 25316 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-08-13 08:26:48.786  INFO 25316 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-08-13 08:26:48.786  INFO 25316 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-08-13 08:26:48.786  INFO 25316 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-08-13 08:26:48.786  INFO 25316 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-08-13 08:26:49.025  INFO 25316 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-08-13 08:26:49.030  INFO 25316 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-08-13 08:26:49.037  INFO 25316 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-08-13 08:26:49.043  INFO 25316 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1597278409040 with initial instances count: 2
+2020-08-13 08:26:49.106  INFO 25316 --- [main] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client ITEM-SERVICE initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=ITEM-SERVICE,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: [[Server:127.0.0.1:8081;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@68deb060
+2020-08-13 08:26:49.108  INFO 25316 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: ITEM-SERVICE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-08-13 08:26:49.556  INFO 25316 --- [main] c.cwh.service.impl.GoodsCwhServiceImpl   : {
+  "bool" : {
+    "should" : [
+      {
+        "match" : {
+          "title" : {
+            "query" : "华为",
+            "operator" : "OR",
+            "prefix_length" : 0,
+            "max_expansions" : 50,
+            "fuzzy_transpositions" : true,
+            "lenient" : false,
+            "zero_terms_query" : "NONE",
+            "auto_generate_synonyms_phrase_query" : true,
+            "boost" : 1.0
+          }
+        }
+      },
+      {
+        "match" : {
+          "brand" : {
+            "query" : "华为",
+            "operator" : "OR",
+            "prefix_length" : 0,
+            "max_expansions" : 50,
+            "fuzzy_transpositions" : true,
+            "lenient" : false,
+            "zero_terms_query" : "NONE",
+            "auto_generate_synonyms_phrase_query" : true,
+            "boost" : 1.0
+          }
+        }
+      },
+      {
+        "match" : {
+          "category" : {
+            "query" : "华为",
+            "operator" : "OR",
+            "prefix_length" : 0,
+            "max_expansions" : 50,
+            "fuzzy_transpositions" : true,
+            "lenient" : false,
+            "zero_terms_query" : "NONE",
+            "auto_generate_synonyms_phrase_query" : true,
+            "boost" : 1.0
+          }
+        }
+      }
+    ],
+    "adjust_pure_negative" : true,
+    "boost" : 1.0
+  }
+}
+2020-08-13 08:26:49.739  INFO 25316 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SEARCH-SERVICE with eureka with status DOWN
+2020-08-13 08:26:49.750  WARN 25316 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1597278409750, current=DOWN, previous=STARTING]
+2020-08-13 08:26:49.761  INFO 25316 --- [Thread-8] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2020-08-13 08:26:49.767  INFO 25316 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SEARCH-SERVICE/search-service:-1: registering service...
+2020-08-13 08:26:49.769  INFO 25316 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-08-13 08:26:49.770  INFO 25316 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-13 08:26:49.809  INFO 25316 --- [SpringContextShutdownHook] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-ITEM-SERVICE
+2020-08-13 08:26:49.814  INFO 25316 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SEARCH-SERVICE/search-service:-1 - registration status: 204
+2020-08-13 08:26:49.819  INFO 25316 --- [SpringContextShutdownHook] c.n.u.concurrent.ShutdownEnabledTimer    : Exception caught (might be ok if at shutdown)
+
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82) ~[na:1.8.0_65]
+	at java.lang.Runtime.removeShutdownHook(Runtime.java:239) ~[na:1.8.0_65]
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70) ~[netflix-commons-util-0.3.0.jar:0.3.0]
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:339) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:273) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92) [spring-cloud-context-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+
+2020-08-13 08:26:50.820  INFO 25316 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-08-13 08:26:53.821  INFO 25316 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-08-13 08:26:53.826  INFO 25316 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SEARCH-SERVICE/search-service:-1 - deregister  status: 200
+2020-08-13 08:26:53.842  INFO 25316 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2020-08-13 08:48:58.501  INFO 24080 --- [main] com.cwh.HgihtTest                        : No active profile set, falling back to default profiles: default
+2020-08-13 08:48:59.590  INFO 24080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:48:59.593  INFO 24080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:48:59.916  INFO 24080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 314ms. Found 2 Elasticsearch repository interfaces.
+2020-08-13 08:48:59.925  INFO 24080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:48:59.927  INFO 24080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:48:59.947  INFO 24080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-08-13 08:48:59.981  INFO 24080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:48:59.984  INFO 24080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-08-13 08:49:00.029  INFO 24080 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsCWHRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:49:00.030  INFO 24080 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:49:00.039  INFO 24080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34ms. Found 0 Redis repository interfaces.
+2020-08-13 08:49:00.676  INFO 24080 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a4f2f0f3-48cb-3145-b79e-e6f1922ba31a
+2020-08-13 08:49:00.993  INFO 24080 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionBrandClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:49:00.996  INFO 24080 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionCategoryClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:49:00.998  INFO 24080 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionGoodsClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:49:01.000  INFO 24080 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionSpecClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:49:01.983  INFO 24080 --- [main] o.elasticsearch.plugins.PluginsService   : no modules loaded
+2020-08-13 08:49:01.984  INFO 24080 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2020-08-13 08:49:01.984  INFO 24080 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020-08-13 08:49:01.984  INFO 24080 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020-08-13 08:49:01.985  INFO 24080 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2020-08-13 08:49:01.985  INFO 24080 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020-08-13 08:49:04.181  INFO 24080 --- [main] o.s.d.e.c.TransportClientFactoryBean     : Adding transport node : 192.168.138.128:9300
+2020-08-13 08:49:07.078  WARN 24080 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:49:07.079  INFO 24080 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:49:07.093  WARN 24080 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:49:07.093  INFO 24080 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:49:07.774  INFO 24080 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-13 08:49:10.564  INFO 24080 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-08-13 08:49:12.160  INFO 24080 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-08-13 08:49:12.235  WARN 24080 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-08-13 08:49:12.489  INFO 24080 --- [main] com.cwh.HgihtTest                        : Started HgihtTest in 17.689 seconds (JVM running for 20.645)
+2020-08-13 08:49:13.226  INFO 24080 --- [SpringContextShutdownHook] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-08-13 08:49:13.232  INFO 24080 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SEARCH-SERVICE with eureka with status DOWN
+2020-08-13 08:49:13.243  INFO 24080 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-08-13 08:49:13.245  INFO 24080 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-13 08:49:48.045  INFO 10044 --- [main] com.cwh.HgihtTest                        : No active profile set, falling back to default profiles: default
+2020-08-13 08:49:49.113  INFO 10044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:49:49.116  INFO 10044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:49:49.415  INFO 10044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 290ms. Found 2 Elasticsearch repository interfaces.
+2020-08-13 08:49:49.422  INFO 10044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:49:49.424  INFO 10044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-08-13 08:49:49.444  INFO 10044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-08-13 08:49:49.480  INFO 10044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 08:49:49.483  INFO 10044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-08-13 08:49:49.511  INFO 10044 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsCWHRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:49:49.512  INFO 10044 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 08:49:49.513  INFO 10044 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2020-08-13 08:49:50.078  INFO 10044 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a4f2f0f3-48cb-3145-b79e-e6f1922ba31a
+2020-08-13 08:49:50.423  INFO 10044 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionBrandClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:49:50.425  INFO 10044 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionCategoryClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:49:50.427  INFO 10044 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionGoodsClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:49:50.428  INFO 10044 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionSpecClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 08:49:51.386  INFO 10044 --- [main] o.elasticsearch.plugins.PluginsService   : no modules loaded
+2020-08-13 08:49:51.388  INFO 10044 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2020-08-13 08:49:51.388  INFO 10044 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020-08-13 08:49:51.388  INFO 10044 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020-08-13 08:49:51.388  INFO 10044 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2020-08-13 08:49:51.388  INFO 10044 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020-08-13 08:49:53.636  INFO 10044 --- [main] o.s.d.e.c.TransportClientFactoryBean     : Adding transport node : 192.168.138.128:9300
+2020-08-13 08:49:56.585  WARN 10044 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:49:56.586  INFO 10044 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:49:56.596  WARN 10044 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 08:49:56.596  INFO 10044 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 08:49:57.197  INFO 10044 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-13 08:50:00.021  INFO 10044 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-08-13 08:50:01.598  INFO 10044 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-08-13 08:50:01.689  WARN 10044 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-08-13 08:50:01.967  INFO 10044 --- [main] com.cwh.HgihtTest                        : Started HgihtTest in 17.673 seconds (JVM running for 20.685)
+2020-08-13 08:50:02.636  INFO 10044 --- [SpringContextShutdownHook] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-08-13 08:50:02.643  INFO 10044 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SEARCH-SERVICE with eureka with status DOWN
+2020-08-13 08:50:02.657  INFO 10044 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-08-13 08:50:02.658  INFO 10044 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-13 09:15:16.413  INFO 23980 --- [main] com.cwh.GoodsTest                        : No active profile set, falling back to default profiles: default
+2020-08-13 09:15:17.534  INFO 23980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 09:15:17.541  INFO 23980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-08-13 09:15:17.861  INFO 23980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 312ms. Found 2 Elasticsearch repository interfaces.
+2020-08-13 09:15:17.868  INFO 23980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 09:15:17.869  INFO 23980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-08-13 09:15:17.887  INFO 23980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-08-13 09:15:17.920  INFO 23980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-13 09:15:17.924  INFO 23980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-08-13 09:15:17.956  INFO 23980 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsCWHRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 09:15:17.958  INFO 23980 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.cwh.dao.GoodsRepository. If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository.
+2020-08-13 09:15:17.958  INFO 23980 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14ms. Found 0 Redis repository interfaces.
+2020-08-13 09:15:18.529  INFO 23980 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a4f2f0f3-48cb-3145-b79e-e6f1922ba31a
+2020-08-13 09:15:18.972  INFO 23980 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionBrandClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 09:15:18.973  INFO 23980 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionCategoryClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 09:15:18.977  INFO 23980 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionGoodsClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 09:15:18.979  INFO 23980 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'com.cwh.client.ConnectionSpecClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-13 09:15:20.064  INFO 23980 --- [main] o.elasticsearch.plugins.PluginsService   : no modules loaded
+2020-08-13 09:15:20.066  INFO 23980 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.index.reindex.ReindexPlugin]
+2020-08-13 09:15:20.067  INFO 23980 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.join.ParentJoinPlugin]
+2020-08-13 09:15:20.068  INFO 23980 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.percolator.PercolatorPlugin]
+2020-08-13 09:15:20.068  INFO 23980 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.script.mustache.MustachePlugin]
+2020-08-13 09:15:20.068  INFO 23980 --- [main] o.elasticsearch.plugins.PluginsService   : loaded plugin [org.elasticsearch.transport.Netty4Plugin]
+2020-08-13 09:15:22.221  INFO 23980 --- [main] o.s.d.e.c.TransportClientFactoryBean     : Adding transport node : 192.168.138.128:9300
+2020-08-13 09:15:25.833  WARN 23980 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 09:15:25.833  INFO 23980 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 09:15:25.844  WARN 23980 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-08-13 09:15:25.845  INFO 23980 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-08-13 09:15:26.483  INFO 23980 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-13 09:15:29.528  INFO 23980 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-08-13 09:15:31.126  INFO 23980 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2020-08-13 09:15:31.209  WARN 23980 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-08-13 09:15:31.489  INFO 23980 --- [main] com.cwh.GoodsTest                        : Started GoodsTest in 19.011 seconds (JVM running for 21.951)
+2020-08-13 09:15:32.274  INFO 23980 --- [main] c.netflix.config.ChainedDynamicProperty  : Flipping property: ITEM-SERVICE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-08-13 09:15:32.351  INFO 23980 --- [main] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-ITEM-SERVICE
+2020-08-13 09:15:32.352  INFO 23980 --- [main] c.netflix.loadbalancer.BaseLoadBalancer  : Client: ITEM-SERVICE instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=ITEM-SERVICE,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2020-08-13 09:15:32.371  INFO 23980 --- [main] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2020-08-13 09:15:32.393  INFO 23980 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-08-13 09:15:32.420  INFO 23980 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-08-13 09:15:32.523  INFO 23980 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-08-13 09:15:32.523  INFO 23980 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-08-13 09:15:32.823  INFO 23980 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-08-13 09:15:32.824  INFO 23980 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-08-13 09:15:33.211  INFO 23980 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-08-13 09:15:33.572  INFO 23980 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-08-13 09:15:33.572  INFO 23980 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-08-13 09:15:33.572  INFO 23980 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-08-13 09:15:33.573  INFO 23980 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-08-13 09:15:33.573  INFO 23980 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-08-13 09:15:33.573  INFO 23980 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-08-13 09:15:33.573  INFO 23980 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-08-13 09:15:33.945  INFO 23980 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-08-13 09:15:33.950  INFO 23980 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-08-13 09:15:33.955  INFO 23980 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-08-13 09:15:33.962  INFO 23980 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1597281333960 with initial instances count: 3
+2020-08-13 09:15:34.029  INFO 23980 --- [main] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client ITEM-SERVICE initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=ITEM-SERVICE,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: [[Server:127.0.0.1:8081;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@6c00601e
+2020-08-13 09:15:34.028  INFO 23980 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: ITEM-SERVICE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2020-08-13 09:15:43.820  INFO 23980 --- [Thread-8] c.n.l.PollingServerListUpdater           : Shutting down the Executor Pool for PollingServerListUpdater
+2020-08-13 09:15:43.820  INFO 23980 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SEARCH-SERVICE with eureka with status DOWN
+2020-08-13 09:15:43.822  WARN 23980 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1597281343822, current=DOWN, previous=STARTING]
+2020-08-13 09:15:43.827  INFO 23980 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SEARCH-SERVICE/search-service:-1: registering service...
+2020-08-13 09:15:43.839  INFO 23980 --- [SpringContextShutdownHook] o.s.j.e.a.AnnotationMBeanExporter        : Could not unregister MBean [com.github.tobato.fastdfs.domain.conn:name=fdfsConnectionPool,type=FdfsConnectionPool] as said MBean is not registered (perhaps already unregistered by an external process)
+2020-08-13 09:15:43.840  INFO 23980 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-08-13 09:15:43.864  INFO 23980 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SEARCH-SERVICE/search-service:-1 - registration status: 204
+2020-08-13 09:15:43.883  INFO 23980 --- [SpringContextShutdownHook] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook removed for: NFLoadBalancer-PingTimer-ITEM-SERVICE
+2020-08-13 09:15:43.893  INFO 23980 --- [SpringContextShutdownHook] c.n.u.concurrent.ShutdownEnabledTimer    : Exception caught (might be ok if at shutdown)
+
+java.lang.IllegalStateException: Shutdown in progress
+	at java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82) ~[na:1.8.0_65]
+	at java.lang.Runtime.removeShutdownHook(Runtime.java:239) ~[na:1.8.0_65]
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70) ~[netflix-commons-util-0.3.0.jar:0.3.0]
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285) [ribbon-loadbalancer-2.3.0.jar:2.3.0]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_65]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_65]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_65]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_65]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:339) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:273) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:978) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92) [spring-cloud-context-2.2.3.RELEASE.jar:2.2.3.RELEASE]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1072) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1065) [spring-beans-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1060) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1029) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:948) [spring-context-5.2.2.RELEASE.jar:5.2.2.RELEASE]
+
+2020-08-13 09:15:44.880  INFO 23980 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-08-13 09:15:47.881  INFO 23980 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-08-13 09:15:47.886  INFO 23980 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SEARCH-SERVICE/search-service:-1 - deregister  status: 200
+2020-08-13 09:15:47.901  INFO 23980 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

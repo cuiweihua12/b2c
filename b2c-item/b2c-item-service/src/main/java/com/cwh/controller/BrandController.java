@@ -98,4 +98,10 @@ public class BrandController {
     public ResponseEntity<List<Brand>> queryBrandByCategoryId(@PathVariable("cId") Long cateGoryId){
         return ResponseEntity.ok(brandService.queryBrandByCategoryId(cateGoryId));
     }
+
+    @GetMapping("queryByIdList/{ids}")
+    @ApiOperation(("根据id集合查询品牌信息"))
+    public ResponseEntity<List<Brand>> queryByIdList(@PathVariable("ids") List<Long> ids){
+        return ResponseEntity.ok(brandService.queryByIdList(ids));
+    }
 }
