@@ -23,4 +23,6 @@ public interface GoodsService {
     List<Sku> querySkusBySpuId(Long pid);
 
     void editGoods(SpuBo spuBo);
+
+    Spu querySpuById(Long pid);
 }

@@ -10,4 +10,6 @@ public interface SpecParamService {
     Integer deleteParams(Long id);
 
     List<SpecParam> getParamsByCategoryId(Long categoryId);
+
+    List<SpecParam> searchParamsAll();
 }

@@ -11,6 +11,8 @@ import com.cwh.mapper.CategoryMapper;
 import com.cwh.service.BrandService;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -35,6 +37,8 @@ public class BrandServiceImpl implements BrandService {
     private CategoryBrandMapper categoryBrandMapper;
     @Resource
     private CategoryMapper categoryMapper;
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
 
     @Override
     @Transactional
@@ -53,6 +57,7 @@ public class BrandServiceImpl implements BrandService {
                 //保存品牌类别关系
                 saveCateBran(categoryBrand,brand);
             }
+            rabbitTemplate.convertAndSend("b2c","item.brand.save",brand);
         }
         return brand;
     }
@@ -74,6 +79,9 @@ public class BrandServiceImpl implements BrandService {
             categoryBrandMapper.deleteByBrand(id);
             //删除商品
             brandMapper.deleteByPrimaryKey(id);
+            //删除redis数据
+            //发送rabbitmq队列消息
+            rabbitTemplate.convertAndSend("b2c","item.brand.remove",id);
         } catch (Exception e) {
             e.printStackTrace();
             return CommonResult.RESULT_ERROR;
@@ -114,9 +122,8 @@ public class BrandServiceImpl implements BrandService {
 
     @Override
     public Map<String, Object> queryById(Brand brand) {
-        CategoryBrand categoryBrand = null;
         //查询品牌信息
-        Brand byPrimaryKey = brandMapper.selectByPrimaryKey(brand.getId());
+        Brand byPrimaryKey  = brandMapper.selectByPrimaryKey(brand.getId());
         //查询品牌分类信息
         List<Category> categoryList = categoryMapper.selectBrandCategoryAll(brand.getId());
         HashMap<String, Object> hashMap = new HashMap<>();
@@ -127,7 +134,7 @@ public class BrandServiceImpl implements BrandService {
 
     @Override
     public List<Brand> searchBrandAll() {
-        return brandMapper.selectAll(null,null,null);
+        return brandMapper.selectAll(null, null, null);
     }
 
     @Override

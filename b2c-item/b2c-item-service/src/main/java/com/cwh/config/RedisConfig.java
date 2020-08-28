@@ -7,6 +7,7 @@ import org.springframework.data.redis.cache.RedisCacheConfiguration;
 import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.RedisSerializationContext;
@@ -21,21 +22,43 @@ import java.time.Duration;
  * @author: cuiweihua
  * @create: 2020-07-19 10:58
  */
-//@Configuration
+@Configuration
 public class RedisConfig {
-    //自定义redis模板
+    /**
+     * 自定于redis模板
+     * @param redisConnectionFactory
+     * @return
+     * @throws UnknownHostException
+     */
     @Bean
-    public RedisTemplate<Object, Object> userRedisTemplate(RedisConnectionFactory redisConnectionFactory)
+    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory)
             throws UnknownHostException {
-        RedisTemplate<Object, Object> template = new RedisTemplate<>();
+        RedisTemplate<String, Object> template = new RedisTemplate<>();
         template.setConnectionFactory(redisConnectionFactory);
         Jackson2JsonRedisSerializer<Object> serializer = new Jackson2JsonRedisSerializer<Object>(Object.class);
         //设置redis默认序列化方式
         template.setDefaultSerializer(serializer);
+        StringRedisSerializer stringRedisSerializer = new StringRedisSerializer();
+        template.setKeySerializer(stringRedisSerializer);
+        template.setHashKeySerializer(stringRedisSerializer);
         return template;
     }
-    //自定义缓存管理
+
     @Bean
+    public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory redisConnectionFactory)
+            throws UnknownHostException {
+        StringRedisTemplate template = new StringRedisTemplate();
+        template.setConnectionFactory(redisConnectionFactory);
+        Jackson2JsonRedisSerializer<String> serializer = new Jackson2JsonRedisSerializer<>(String.class);
+        template.setValueSerializer(serializer);
+        template.setHashValueSerializer(serializer);
+        return template;
+    }
+
+
+
+    //自定义缓存管理
+//    @Bean
     public CacheManager cacheManager(RedisConnectionFactory factory){
         //配置redis缓存配置
         RedisCacheConfiguration cacheConfiguration = RedisCacheConfiguration.defaultCacheConfig()

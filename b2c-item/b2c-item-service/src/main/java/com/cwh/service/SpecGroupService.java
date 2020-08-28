@@ -9,7 +9,7 @@ import java.util.List;
 public interface SpecGroupService {
     List<SpecGroup> searchSpecGroupByCategoruId(Long categoryId);
 
-    List<SpecParam> searchSpecParams(Long groupId, Long categoryId);
+    List<SpecParam> searchSpecParams(Long groupId, Long categoryId, Boolean generic);
 
     Integer saveGroup(SpecGroup specGroup);
 

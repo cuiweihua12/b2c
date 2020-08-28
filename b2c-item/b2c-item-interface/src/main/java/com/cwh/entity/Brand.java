@@ -1,16 +1,11 @@
 package com.cwh.entity;
 
-import com.sun.xml.internal.ws.developer.UsesJAXBContext;
 import io.swagger.annotations.ApiModel;
 import lombok.Data;
 import tk.mybatis.mapper.annotation.KeySql;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * 品牌表，一个品牌下有多个商品（spu），一对多关系(TbBrand)实体类
@@ -47,7 +42,7 @@ public class Brand implements Serializable {
      * 品牌
      */
 //    private List<Category> categories;
-
+    @Transient
     private Long[] categories;
 
 }

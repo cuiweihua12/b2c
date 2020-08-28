@@ -31,6 +31,8 @@ public class GoodsController {
     @Autowired
     private GoodsService goodsService;
 
+
+
     @GetMapping(value = "/list",produces = "application/json;charset=UTF-8")
     @ApiOperation(value = "查询商品信息带分页")
     @ApiImplicitParams({
@@ -89,4 +91,13 @@ public class GoodsController {
         goodsService.editGoods(spuBo);
         return ResponseEntity.ok().build();
     }
+
+    @GetMapping("querySpu/{pid}")
+    @ApiOperation(value = "根据主键查询spu信息")
+    @ApiImplicitParam(name = "pid",value = "主键",required = true,type = "Long")
+    public ResponseEntity<Spu> querySpuById(@PathVariable("pid") Long pid){
+
+        return ResponseEntity.ok(goodsService.querySpuById(pid));
+    }
+
 }

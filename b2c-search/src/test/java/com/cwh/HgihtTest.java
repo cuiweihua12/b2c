@@ -21,6 +21,7 @@ import org.springframework.data.elasticsearch.core.aggregation.AggregatedPage;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -60,7 +61,9 @@ public class HgihtTest {
 
     @Test
     public void sortTest(){
-        PageResult<GoodsCWH> pageResult = service.searchGoods(new Pages("华为",1,20,false,null));
+        HashMap<String, String> stringStringHashMap = new HashMap<>();
+        stringStringHashMap.put("CPU核数","八核 + 微智核i6");
+        PageResult<GoodsCWH> pageResult = service.searchGoods(new Pages("华为",1,20,false,null,null));
 //        pageResult.getItems().forEach(i->{
 //            System.out.println(i.getPrice() + "        "+i.getSkus());
 //        });

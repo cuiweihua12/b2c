@@ -1,0 +1,32 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: auth-server
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:8888/eureka
+  instance:
+    #十分内没收到心跳则过期
+    lease-expiration-duration-in-seconds: 10
+    #每间隔五分发送一次心跳
+    lease-renewal-interval-in-seconds: 5
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port}
+
+#记录密钥信息
+b2c:
+  jwt:
+    secret: 9527 # 登录校验的密钥
+    pubKeyPath: D:\temp\rea.pub # 公钥地址
+    priKeyPath: D:\temp\rea.pri # 私钥地址
+    expire: 30 # 过期时间,单位分钟
+    cookieName: B2C_TOKEN #cookie名称
+    cookieMaxAge: 1800 #cookie过期时间，单位为秒
+logging:
+  level:
+    com.cwh:  debug
+  file:
+    name: b2c-auth-server.log

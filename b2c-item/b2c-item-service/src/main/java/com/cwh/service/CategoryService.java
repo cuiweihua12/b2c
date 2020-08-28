@@ -23,4 +23,6 @@ public interface CategoryService {
     Map<String,Object> getCategoryById(Long id);
 
     List<Category> queryCategory(List<Long> ids);
+
+    List<Category> queryCategoryAll();
 }

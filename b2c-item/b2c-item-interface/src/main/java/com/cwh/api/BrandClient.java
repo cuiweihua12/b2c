@@ -59,7 +59,7 @@ public interface BrandClient {
 
     @GetMapping("queryById")
     @ApiOperation("根据id查询品牌信息,同时返回分类信息")
-    public ResponseEntity<Map<String,Object>> queryById(Long bid);
+    public ResponseEntity<Map<String,Object>> queryById(Brand brand);
 
     @GetMapping("queryByBrandId/{bid}")
     @ApiOperation("根据id查询品牌信息")

@@ -6,7 +6,6 @@ import com.cwh.pojo.GoodsCWH;
 import com.cwh.pojo.Pages;
 import com.cwh.pojo.SearchResult;
 import com.cwh.service.GoodsCWHService;
-import com.cwh.service.GoodsService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.jetbrains.annotations.NotNull;
@@ -25,15 +24,7 @@ import org.springframework.web.bind.annotation.*;
 @Api(value = "es查询商品信息接口")
 public class SearchController {
 
-    /**
-     * 上课做
-     */
-    @Autowired
-    private GoodsService goodsService;
 
-    /**
-     * 自己做
-     */
     @Autowired
     private GoodsCWHService goodsCWHService;
 
@@ -53,5 +44,6 @@ public class SearchController {
         goodsCWHService.saveGoods(goods);
         return ResponseEntity.ok().build();
     }
+
 
 }

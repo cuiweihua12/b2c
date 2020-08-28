@@ -1,8 +1,8 @@
 package com.cwh.pojo;
 
+import com.cwh.bo.BrandBo;
+import com.cwh.bo.CategoryBo;
 import com.cwh.common.utils.PageResult;
-import com.cwh.entity.Brand;
-import com.cwh.entity.Category;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -21,44 +21,27 @@ import java.util.Map;
 @Data
 public class SearchResult<T> extends PageResult<T> {
 
-    private List<Category> categoryList;
+    private List<CategoryBo> categoryList;
 
-    private List<Brand> brandList;
+    private List<BrandBo> brandList;
 
     private List<Map<String,Object>> specMapList;
 
 
-    public SearchResult(List<Category> categoryList, List<Brand> brandList) {
-        this.categoryList = categoryList;
-        this.brandList = brandList;
-    }
-
-    public SearchResult(Long total, List<T> items, List<Category> categoryList, List<Brand> brandList) {
-        super(total, items);
-        this.categoryList = categoryList;
-        this.brandList = brandList;
-    }
-
-    public SearchResult(Long total, Long totalPage, List<T> items, List<Category> categoryList, List<Brand> brandList) {
-        super(total, totalPage, items);
-        this.categoryList = categoryList;
-        this.brandList = brandList;
-    }
-
-    public SearchResult(List<Category> categoryList, List<Brand> brandList, List<Map<String, Object>> specMapList) {
+    public SearchResult(List<CategoryBo> categoryList, List<BrandBo> brandList, List<Map<String, Object>> specMapList) {
         this.categoryList = categoryList;
         this.brandList = brandList;
         this.specMapList = specMapList;
     }
 
-    public SearchResult(Long total, List<T> items, List<Category> categoryList, List<Brand> brandList, List<Map<String, Object>> specMapList) {
+    public SearchResult(Long total, List<T> items, List<CategoryBo> categoryList, List<BrandBo> brandList, List<Map<String, Object>> specMapList) {
         super(total, items);
         this.categoryList = categoryList;
         this.brandList = brandList;
         this.specMapList = specMapList;
     }
 
-    public SearchResult(Long total, Long totalPage, List<T> items, List<Category> categoryList, List<Brand> brandList, List<Map<String, Object>> specMapList) {
+    public SearchResult(Long total, Long totalPage, List<T> items, List<CategoryBo> categoryList, List<BrandBo> brandList, List<Map<String, Object>> specMapList) {
         super(total, totalPage, items);
         this.categoryList = categoryList;
         this.brandList = brandList;

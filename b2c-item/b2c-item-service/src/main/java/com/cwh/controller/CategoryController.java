@@ -121,4 +121,9 @@ public class CategoryController {
         return ResponseEntity.ok(service.getCategoryById(id));
     }*/
 
+    @GetMapping("allCategory")
+    @ApiOperation(value = "获取所有商品分类")
+    public ResponseEntity<List<Category>> queryCategoryAll(){
+        return ResponseEntity.ok(service.queryCategoryAll());
+    }
 }

@@ -26,7 +26,8 @@ public interface SpecClient {
     })
     public ResponseEntity<List<SpecParam>> searchSpecParamsBySpecGroupId(
             @RequestParam(value = "gid",required = false)Long groupId,
-            @RequestParam(value = "cid",required = false) Long categoryId);
+            @RequestParam(value = "cid",required = false) Long categoryId,
+            @RequestParam(value = "generic",required = false) Boolean generic);
 
     @PostMapping("/group")
     @ApiOperation(value = "保存规格分组")
@@ -66,4 +67,8 @@ public interface SpecClient {
     @ApiImplicitParam(name = "cids",value = "分类id集合",required = true,type = "List<Long>")
     @ApiOperation("根据分类id集合获取规格参数")
     public ResponseEntity<List<SpecParam>> getSpecParamsByCidList(@PathVariable("cids") List<Long> cids);
+
+    @GetMapping(value = "paramsAll")
+    @ApiOperation(value = "获取所有规格参数")
+    public ResponseEntity<List<SpecParam>> searchParamsAll();
 }

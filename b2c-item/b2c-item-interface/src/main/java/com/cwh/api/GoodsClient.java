@@ -62,4 +62,10 @@ public interface GoodsClient {
     @PutMapping
     @ApiOperation(value = "修改商品信息")
     public ResponseEntity<Void> eidtGoods(@RequestBody SpuBo spuBo);
+
+
+    @GetMapping("querySpu/{pid}")
+    @ApiOperation(value = "根据主键查询spu信息")
+    @ApiImplicitParam(name = "pid",value = "主键",required = true,type = "Long")
+    public ResponseEntity<Spu> querySpuById(@PathVariable("pid") Long pid);
 }

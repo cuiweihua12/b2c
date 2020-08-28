@@ -37,10 +37,11 @@ public class SpecGroupServiceImpl implements SpecGroupService {
 
     @Override
     @Transactional(readOnly = true)
-    public List<SpecParam> searchSpecParams(Long groupId, Long categoryId) {
+    public List<SpecParam> searchSpecParams(Long groupId, Long categoryId, Boolean generic) {
         SpecParam param = new SpecParam();
         param.setGroupId(groupId);
         param.setCid(categoryId);
+        param.setGeneric(generic);
         return specParamMapper.select(param);
     }
 

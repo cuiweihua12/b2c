@@ -15,7 +15,11 @@ import com.cwh.mapper.StockMapper;
 import com.cwh.service.GoodsService;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -42,6 +46,10 @@ public class GoodsServiceImpl implements GoodsService {
     private SkuMapper skuMapper;
     @Resource
     private StockMapper stockMapper;
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
+    private Logger logger = LoggerFactory.getLogger(GoodsServiceImpl.class);
 
     @Override
     @Transactional(readOnly = true)
@@ -92,13 +100,12 @@ public class GoodsServiceImpl implements GoodsService {
             //库存
             stock = new Stock();
             BeanUtils.copyProperties(skuBo,stock);
-            if (stock != null){
-                stock.setSkuId(sku.getId());
-                stockMapper.insertSelective(stock);
-            }
+            stock.setSkuId(sku.getId());
+            stockMapper.insertSelective(stock);
             stockList.add(stock);
         }
-
+        //发送消息队列
+        rabbitTemplate.convertAndSend("b2c","item.save",spu.getId());
         return null;
     }
 
@@ -137,25 +144,61 @@ public class GoodsServiceImpl implements GoodsService {
 
     @Override
     @Transactional(rollbackFor = Exception.class)
+    /**
+    *@Description: 删除商品
+    *@Param: [id]
+    *@return: void
+    *@Author: cuiweihua
+    *@date: 2020/8/20
+    */
     public void deleteGoods(Long id) {
-        spuMapper.deleteByPrimaryKey(id);
+        //修改spu失效
+        Spu spu = new Spu();
+        spu.setValid(false);
+        spu.setId(id);
+        spuMapper.updateByPrimaryKeySelective(spu);
+        //查询spu拥有的sku，将状态修改为下架
+        Sku sku = new Sku();
+        sku.setSpuId(id);
+        List<Sku> select = skuMapper.select(sku);
+        select.stream().map(sku1 -> {
+            sku1.setEnable(false);
+            return sku1;
+        }).forEach(skuMapper::updateByPrimaryKeySelective);
+        //发送队列，通知其他系统
+        rabbitTemplate.convertAndSend("b2c","item.delete",id);
+       /* spuMapper.deleteByPrimaryKey(id);
         spuDetailMapper.deleteByPrimaryKey(id);
         Sku sku = new Sku();
         sku.setSpuId(id);
         List<Sku> select = skuMapper.select(sku);
         stockMapper.deleteByIdList(select.stream().map(Sku::getId).collect(Collectors.toList()));
-        skuMapper.delete(sku);
+        skuMapper.delete(sku);*/
 
     }
 
+
     @Override
     @Transactional(rollbackFor = Exception.class)
+    /**
+    *@Description: 修改商品上下架状态
+    *@Param: [id, saleable]
+    *@return: void
+    *@Author: cuiweihua
+    *@date: 2020/8/20
+    */
     public void editGoodsSaleable(Long id, Boolean saleable) {
         Spu spu = new Spu();
         spu.setSaleable(saleable);
         spu.setId(id);
         spuMapper.updateByPrimaryKeySelective(spu);
         skuFalse(id);
+        //发送队列消息  通知下架
+        if (saleable){
+            rabbitTemplate.convertAndSend("b2c","item.update",id);
+        }else {
+            rabbitTemplate.convertAndSend("b2c","item.off",id);
+        }
     }
 
     public void skuFalse(Long id){
@@ -179,7 +222,8 @@ public class GoodsServiceImpl implements GoodsService {
         sku.setSpuId(pid);
         List<Sku> skuList = skuMapper.select(sku);
         for (Sku sku1 : skuList) {
-            sku1.setStock(stockMapper.selectByPrimaryKey(sku1.getId()).getStock());
+            Stock stock = stockMapper.selectByPrimaryKey(sku1.getId());
+            sku1.setStock((stock==null?0:stock.getStock()));
         }
         return skuList;
     }
@@ -231,5 +275,12 @@ public class GoodsServiceImpl implements GoodsService {
             stock.setSkuId(sku.getId());
             stockMapper.insertSelective(stock);
         }
+        //发送消息队列消息
+        rabbitTemplate.convertAndSend("b2c","item.update",spuBo.getId());
+    }
+
+    @Override
+    public Spu querySpuById(Long pid) {
+        return spuMapper.selectByPrimaryKey(pid);
     }
 }

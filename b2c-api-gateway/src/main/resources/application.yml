@@ -1,4 +1,3 @@
-
 spring:
   # 服务名
   application:
@@ -48,7 +47,27 @@ zuul:
     # 将item-service服务映射到item
     item-service: /item/**
     search-service: /search/**
+    user-service: /user/**
+    auth-server:  /auth/**
   #忽略路由的服务
   ignored-services: upload-service
   #忽略路由的路径
   ignored-patterns: /upload/**
+  # 是否将域名信息放入header 中的host文件
+  add-host-header: true
+  #set-cookie默认被禁止了，设置为null意思时不禁止
+  sensitive-headers:
+
+#网关拦截器需要公钥
+b2c:
+  jwt:
+    secret: 9527 # 登录校验的密钥
+    pubKeyPath: D:\temp\rea.pub # 公钥地址
+    cookieName: B2C_TOKEN
+  filter:
+    allowsignore:
+      - /api/auth  #授权服务
+      - /api/search #查询服务
+      - /api/user/register #注册
+      - /api/user/check #校验用户
+      - /api/item

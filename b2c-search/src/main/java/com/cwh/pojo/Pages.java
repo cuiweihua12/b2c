@@ -34,4 +34,7 @@ public class Pages {
 
     @ApiModelProperty(name = "sortBy",value = "排序字段",dataType = "String",example = "price createTime",required = false)
     private String sortBy;
+
+    @ApiModelProperty(name = "filterMap",value = "条件过滤对象,json字符串",dataType = "String")
+    private String filterMap;
 }

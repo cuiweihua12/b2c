@@ -2,6 +2,9 @@ package com.cwh;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * @program: b2c
  * @description:
@@ -29,5 +32,16 @@ public class QuitTest {
 
         int [ ][ ]  arrs={{22,15,32,20,18},{12,21,25,19,33},{14,58,34,24,66}};
         System.out.println(arrs[2][0]);
+    }
+
+    @Test
+    public  void  test3(){
+        ArrayList<Long> list = new ArrayList<>();
+        list.add(1115l);
+        list.add(1528l);
+        list.add(1912l);
+        String[] array = list.stream().map(String::valueOf).toArray(String[]::new);
+        System.out.println(Arrays.stream(array).toString());
+        System.out.println(array.length);
     }
 }

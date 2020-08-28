@@ -44,4 +44,9 @@ public class ConnectionGoodsClientImpl implements ConnectionCategoryClient {
     public ResponseEntity<List<Category>> queryCategory(List<Long> ids) {
         return null;
     }
+
+    @Override
+    public ResponseEntity<List<Category>> queryCategoryAll() {
+        return null;
+    }
 }

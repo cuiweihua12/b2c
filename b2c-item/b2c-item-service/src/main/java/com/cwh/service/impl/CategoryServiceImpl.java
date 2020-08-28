@@ -3,9 +3,12 @@ package com.cwh.service.impl;
 import com.cwh.entity.Brand;
 import com.cwh.entity.Category;
 import com.cwh.mapper.BrandMapper;
+import com.cwh.mapper.CategoryMapper;
 import com.cwh.mapper.CategoryMapperTK;
 import com.cwh.service.CategoryService;
-import com.cwh.mapper.CategoryMapper;
+import com.cwh.utils.RedisUtils;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,6 +32,11 @@ public class CategoryServiceImpl implements CategoryService {
     private BrandMapper brandMapper;
     @Resource
     private CategoryMapperTK categoryMapperTK;
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
+    @Autowired
+    private RedisUtils redisUtils;
 
     @Override
     public List<Category> queryCategoryByPid(Long parentId) {
@@ -59,6 +67,7 @@ public class CategoryServiceImpl implements CategoryService {
             }
             //删除
             categoryMapper.deleteByPrimaryKey(id);
+            rabbitTemplate.convertAndSend("b2c","category.remove",id);
         } catch (Exception e) {
             e.printStackTrace();
             return "删除失败";
@@ -71,6 +80,7 @@ public class CategoryServiceImpl implements CategoryService {
     @Transactional(rollbackFor = Exception.class,propagation = Propagation.REQUIRED)
     public void editCategoryById(Category category) {
         categoryMapper.updateByPrimaryKeySelective(category);
+        rabbitTemplate.convertAndSend("b2c","category.save",category);
     }
 
     @Override
@@ -82,7 +92,7 @@ public class CategoryServiceImpl implements CategoryService {
         newCate.setId(category.getParentId());
         newCate.setIsParent(true);
         categoryMapper.updateByPrimaryKeySelective(newCate);
-
+        rabbitTemplate.convertAndSend("b2c","category.save",category);
         return category;
     }
 
@@ -112,5 +122,10 @@ public class CategoryServiceImpl implements CategoryService {
     public List<Category> queryCategory(List<Long> ids) {
 
         return categoryMapperTK.selectByIdList(ids);
+    }
+
+    @Override
+    public List<Category> queryCategoryAll() {
+        return categoryMapperTK.selectAll();
     }
 }

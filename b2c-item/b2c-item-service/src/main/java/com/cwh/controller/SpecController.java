@@ -48,12 +48,20 @@ public class SpecController {
     @ApiOperation(value = "查询商品分类参数")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "gid",value = "规格分类id",required = false),
-            @ApiImplicitParam(name = "cid",value = "商品分类id",required = false)
+            @ApiImplicitParam(name = "cid",value = "商品分类id",required = false),
+            @ApiImplicitParam(name = "generic",value = "是否是通用属性",required = false)
     })
     public ResponseEntity<List<SpecParam>> searchSpecParamsBySpecGroupId(@RequestParam(value = "gid",required = false)Long groupId,
-                                                                         @RequestParam(value = "cid",required = false) Long categoryId){
+                                                                         @RequestParam(value = "cid",required = false) Long categoryId,
+                                                                         @RequestParam(value = "generic",required = false) Boolean generic){
 
-        return ResponseEntity.ok(specGroupService.searchSpecParams(groupId,categoryId));
+        return ResponseEntity.ok(specGroupService.searchSpecParams(groupId,categoryId,generic));
+    }
+
+    @GetMapping(value = "paramsAll")
+    @ApiOperation(value = "获取所有规格参数")
+    public ResponseEntity<List<SpecParam>> searchParamsAll(){
+        return ResponseEntity.ok(specParamService.searchParamsAll());
     }
 
     @PostMapping("/group")

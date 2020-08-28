@@ -75,4 +75,8 @@ public interface CategoryClient {
     @GetMapping("queryCategory/{ids}")
     @ApiImplicitParam(name = "ids",value = "分类id集合",type = "List/Array")
     public ResponseEntity<List<Category>> queryCategory(@PathVariable("ids") List<Long> ids);
+
+    @GetMapping("allCategory")
+    @ApiOperation(value = "获取所有商品分类")
+    public ResponseEntity<List<Category>> queryCategoryAll();
 }

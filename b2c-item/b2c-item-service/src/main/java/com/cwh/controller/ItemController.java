@@ -7,13 +7,12 @@ import com.cwh.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @program: b2c
@@ -21,17 +20,17 @@ import java.util.Map;
  * @author: cuiweihua
  * @create: 2020-07-13 19:18
  */
-@RestController
+@Controller
 public class ItemController {
     @Autowired
     private ItemService service;
     @GetMapping(value = "/item",produces = "application/json;charset=UTF-8")
-    public Map getMap(){
+    public String getMap(){
 
         HashMap<String, String> map = new HashMap<>();
         map.put("a","a");
 
-        return map;
+        return "item";
     }
 
     @PostMapping("/save")

@@ -3,6 +3,7 @@ package com.cwh.entity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,6 +15,7 @@ import java.io.Serializable;
 @Data
 @Table(name = "tb_spec_param")
 @ApiModel(description = "商品分类参数信息")
+@ToString
 public class SpecParam implements Serializable {
     /**
      * 主键
